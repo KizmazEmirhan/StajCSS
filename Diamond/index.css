@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 100vh;
+}
+.diamondWrapper {
+  background-color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+.diamond-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.diamond-bottom {
+}
+.triangle-1 {
+  border-right: 50px solid transparent;
+  border-left: 50px solid transparent;
+  border-top: 50px solid #e7bf91;
+}
+.triangle-2 {
+  border-right: 50px solid transparent;
+  border-left: 50px solid transparent;
+  border-top: 50px solid #e7bf91;
+}
+.triangle-3 {
+  border-right: 50px solid transparent;
+  border-left: 50px solid transparent;
+  border-top: 50px solid #c49f79;
+  rotate: 180deg;
+}
+.triangle-4 {
+  border-right: 50px solid transparent;
+  border-left: 50px solid transparent;
+  border-top: 50px solid #c49f79;
+  rotate: 180deg;
+}
+.triangle-5 {
+  border-right: 50px solid transparent;
+  border-left: 50px solid transparent;
+  border-top: 50px solid #c49f79;
+  rotate: 180deg;
+}
+.diamond-top-triangles {
+  position: absolute;
+  display: flex;
+}
+.diamond-bottom-triangles {
+  display: flex;
+}
+.diamond-bottom {
+  display: flex;
+}
+.bottom-triangle-1 {
+  transform: scale(1.5);
+  margin-top: 40px;
+  left: 25px;
+  width: 100px;
+  height: auto;
+  clip-path: polygon(0 0, 67% 0, 105% 88%);
+  background-color: #e7bf91;
+  position: relative;
+}
+.bottom-triangle-2 {
+  border-right: 50px solid transparent;
+  border-left: 50px solid transparent;
+  border-top: 200px solid #d7b084;
+}
+.bottom-triangle-3 {
+  transform: scale(-1.5, 1);
+  left: -25px;
+  position: relative;
+  width: 100px;
+  height: auto;
+  clip-path: polygon(0 0, 67% 0, 101% 102%);
+  background-color: #e7bf91;
+}
