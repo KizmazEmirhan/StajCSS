@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Playwrite+NZ:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Styling with Tailwind</title>
+  </head>
+  <body class="grid items-center transition-colors">
+    <div id="theHeader" class="flex items-center flex-col">
+      <div class="grid lg:w-full mx-auto">
+        <div
+          id="higherThanNavbar"
+          class="lg:flex relative hidden gap-4 h-[35px] items-center bg-[#f5f5f5]"
+        >
+          <div class="flex w-[80%] mx-auto">
+            <div id="linksSection" class="flex items-start mr-auto ml-4">
+              <div class="flex gap-8 text-sm">
+                <a class="mr-1 cursor-pointer hover:text-orange-500">Lorem</a>
+                <a class="mr-1 cursor-pointer hover:text-orange-500">Lorem</a>
+                <a class="mr-1 cursor-pointer hover:text-orange-500">Lorem</a>
+                <a class="mr-1 cursor-pointer hover:text-orange-500">Lorem</a>
+                <a class="mr-1 cursor-pointer hover:text-orange-500">Lorem</a>
+              </div>
+            </div>
+            <div id="callSection" class="flex mr-4">
+              <div class="flex gap-8 text-sm">
+                <a class="ml-1 cursor-pointer hover:text-orange-500">Lorem</a>
+                <a class="ml-1 cursor-pointer hover:text-orange-500">Lorem</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div
+          class="flex lg:flex-nowrap  lg:flex-row flex-wrap justify-between lg:justify-between items-center w-[80%] mx-auto px-4 py-5 gap-3"
+        >
+          <div
+            id="secondDropdownMenu"
+            class="lg:hidden group/hiddenDropdown"
+            onclick="openMobileMenu()"
+          >
+            <button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="currentColor"
+                class="bi bi-list"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+                />
+              </svg>
+            </button>
+          </div>
+          <div id="logoImage" class="flex flex-1 sm:flex-none lg:order-none">
+            <p>
+              <img src="logo.svg" width="140" height="30" />
+            </p>
+          </div>
+          <div
+            id="searchSectionBegins"
+            class="flex h-full items-center w-full lg:w-[60%] justify-center px-auto relative lg:order-none order-last"
+          >
+            <form
+              id="searchSection"
+              class="w-full h-full px-auto relative lg:justify-center lg:flex"
+            >
+              <div
+                id="searchField"
+                class="flex h-[50px] lg:w-[80%] w-full rounded-lg justify-end items-center"
+              >
+                <input
+                  placeholder="Search something"
+                  class="h-full rounded-md bg-[#f5f5f5] !ps-4 !pe-12 flex w-[-webkit-fill-available] focus:outline-orange-500"
+                />
+                <button class="m-auto absolute mr-5">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    fill="currentColor"
+                    class="bi bi-search"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+          <div id="navbarButtonsSection">
+            <div id="alignButtons" class="flex gap-8">
+              <div
+                id="buttons"
+                class="flex gap-2 items-center cursor-pointer hover:text-orange-500"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  class="bi bi-heart"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
+                  />
+                </svg>
+                <a class="text-lg lg:block hidden">Beğendiklerim</a>
+              </div>
+              <div
+                id="buttons"
+                class="flex gap-2 items-center cursor-pointer hover:text-orange-500"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  class="bi bi-cart"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"
+                  />
+                </svg>
+                <a class="text-lg lg:block hidden">Sepetim</a>
+              </div>
+              <div
+                id="buttons"
+                class="flex gap-2 items-center cursor-pointer hover:text-orange-500"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  class="bi bi-person"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"
+                  />
+                </svg>
+                <a class="text-lg lg:block hidden">Hesabım</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="w-full" />
+      <div
+        id="navbarSection"
+        class="hidden lg:flex items-center justify-start lg:w-full h-[45px] mt-[20px]"
+      >
+        <div class="mx-auto flex h-full w-[80%]">
+          <div
+            id="navbarWithDropdown"
+            class="flex w-[150px] justify-between group"
+          >
+            <span
+              id="hamburgerMenu"
+              class="flex absolute flex-wrap group gap-4 items-center cursor-pointer"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-list"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+                />
+              </svg>
+              Kategoriler
+            </span>
+            <div
+              id="dropdownMenu"
+              class="invisible absolute mt-[44px] w-[80%] h-full group-hover:visible flex-row container max-h-[305px]"
+            >
+              <ul
+                id="subCategories"
+                class="bg-[#f5f5f5] overflow-y-auto w-min h-full flex flex-row flex-wrap shadow-lg text-sm rounded-lg"
+              >
+                <li class="group/li flex items-center hover:bg-white pt-[1px]">
+                  <div class="p-4">
+                    <a
+                      class="cursor-pointer hover:text-[#365359] flex items-center gap-[125px]"
+                    >
+                      Lorem1
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-chevron-right"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+
+                  <!-- Burası ikinci kırılımın olduğu yer finallyCategories kısmı bir adet ana başlık ve 4 adet alt başlık içeriyor<--/-->
+
+                  <div
+                    id="finallyCategories"
+                    class="rounded-lg h-full top-0 hidden shadow-lg group-hover/li:flex group-hover/li:absolute group-hover/li:ml-[220px] w-[-webkit-fill-available] gap-[20px] px-12 py-6"
+                  >
+                    <div id="finallyCategories ">
+                      <div class="items-center flex flex-col flex-wrap gap-4">
+                        <a class="flex hover:text-orange-500 cursor-pointer"
+                          >Lorem Main1</a
+                        >
+
+                        <div class="w-full flex flex-col">
+                          <hr />
+                          <a
+                            class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                            >Lorem</a
+                          >
+                          <a
+                            class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                            >Lorem</a
+                          >
+                          <a
+                            class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                            >Lorem</a
+                          >
+                          <a
+                            class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                            >Lorem</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div id="finallyCategories">
+                      <div id="finallyCategories">
+                        <div class="items-center flex flex-col flex-wrap gap-4">
+                          <a class="flex hover:text-orange-500 cursor-pointer"
+                            >Lorem Main2</a
+                          >
+
+                          <div class="w-full flex flex-col">
+                            <hr />
+                            <a
+                              class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                              >Lorem</a
+                            >
+                            <a
+                              class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                              >Lorem</a
+                            >
+                            <a
+                              class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                              >Lorem</a
+                            >
+                            <a
+                              class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                              >Lorem</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="group/li flex items-center hover:bg-white pt-[1px]">
+                  <div class="p-4">
+                    <a
+                      class="cursor-pointer hover:text-[#365359] flex items-center gap-[125px]"
+                    >
+                      Lorem1
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-chevron-right"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+
+                  <!-- Burası ikinci kırılımın olduğu yer finallyCategories kısmı bir adet ana başlık ve 4 adet alt başlık içeriyor<--/-->
+                  <div
+                    id="finallyCategories"
+                    class="rounded-lg top-0 h-full hidden shadow-lg group-hover/li:flex group-hover/li:absolute group-hover/li:ml-[220px] w-[-webkit-fill-available] gap-[20px] px-12 py-6"
+                  >
+                    <div id="finallyCategories">
+                      <div class="items-center flex flex-col flex-wrap gap-4">
+                        <a class="flex hover:text-orange-500 cursor-pointer"
+                          >Lorem Main2</a
+                        >
+                        <div class="w-full flex flex-col">
+                          <hr />
+                          <a
+                            class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                            >Lorem</a
+                          >
+                          <a
+                            class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                            >Lorem</a
+                          >
+                          <a
+                            class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                            >Lorem</a
+                          >
+                          <a
+                            class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                            >Lorem</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div id="finallyCategories">
+                      <div id="finallyCategories">
+                        <div class="items-center flex flex-col flex-wrap gap-4">
+                          <a class="flex hover:text-orange-500 cursor-pointer"
+                            >Lorem Main2</a
+                          >
+                          <div class="w-full flex flex-col">
+                            <hr />
+                            <a
+                              class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                              >Lorem</a
+                            >
+                            <a
+                              class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                              >Lorem</a
+                            >
+                            <a
+                              class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                              >Lorem</a
+                            >
+                            <a
+                              class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                              >Lorem</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="group/li flex items-center hover:bg-white pt-[1px]">
+                  <div class="p-4">
+                    <a
+                      class="cursor-pointer hover:text-[#365359] flex items-center gap-[125px]"
+                    >
+                      Lorem1
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-chevron-right"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+
+                  <!-- Burası ikinci kırılımın olduğu yer finallyCategories kısmı bir adet ana başlık ve 4 adet alt başlık içeriyor<--/-->
+                  <div
+                    id="finallyCategories"
+                    class="rounded-lg top-0 hidden shadow-lg group-hover/li:flex group-hover/li:absolute group-hover/li:ml-[220px] w-[-webkit-fill-available] h-full gap-[20px] px-12 py-6"
+                  >
+                    <div id="finallyCategories">
+                      <div class="items-center flex flex-col flex-wrap gap-4">
+                        <a class="flex hover:text-orange-500 cursor-pointer"
+                          >Lorem Main3</a
+                        >
+                        <div class="w-full flex flex-col">
+                          <hr />
+                          <a
+                            class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                            >Lorem</a
+                          >
+                          <a
+                            class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                            >Lorem</a
+                          >
+                          <a
+                            class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                            >Lorem</a
+                          >
+                          <a
+                            class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                            >Lorem</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div id="finallyCategories">
+                      <div id="finallyCategories">
+                        <div class="items-center flex flex-col flex-wrap gap-4">
+                          <a class="flex hover:text-orange-500 cursor-pointer"
+                            >Lorem Main2</a
+                          >
+                          <div class="w-full flex flex-col">
+                            <hr />
+                            <a
+                              class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                              >Lorem</a
+                            >
+                            <a
+                              class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                              >Lorem</a
+                            >
+                            <a
+                              class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                              >Lorem</a
+                            >
+                            <a
+                              class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                              >Lorem</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="group/li flex items-center hover:bg-white pt-[1px]">
+                  <div class="p-4">
+                    <a
+                      class="cursor-pointer hover:text-[#365359] flex items-center gap-[125px]"
+                    >
+                      Lorem1
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-chevron-right"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+
+                  <!-- Burası ikinci kırılımın olduğu yer finallyCategories kısmı bir adet ana başlık ve 4 adet alt başlık içeriyor<--/-->
+                  <div
+                    id="finallyCategories"
+                    class="rounded-lg top-0 hidden shadow-lg group-hover/li:flex group-hover/li:absolute group-hover/li:ml-[220px] w-[-webkit-fill-available] h-full gap-[20px] px-12 py-6"
+                  >
+                    <div id="finallyCategories">
+                      <div class="items-center flex flex-col flex-wrap gap-4">
+                        <a class="flex hover:text-orange-500 cursor-pointer"
+                          >Lorem Main4</a
+                        >
+                        <div class="w-full flex flex-col">
+                          <hr />
+                          <a
+                            class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                            >Lorem</a
+                          >
+                          <a
+                            class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                            >Lorem</a
+                          >
+                          <a
+                            class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                            >Lorem</a
+                          >
+                          <a
+                            class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                            >Lorem</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div id="finallyCategories">
+                      <div id="finallyCategories">
+                        <div class="items-center flex flex-col flex-wrap gap-4">
+                          <a class="flex hover:text-orange-500 cursor-pointer"
+                            >Lorem Main2</a
+                          >
+                          <div class="w-full flex flex-col">
+                            <hr />
+                            <a
+                              class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                              >Lorem</a
+                            >
+                            <a
+                              class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                              >Lorem</a
+                            >
+                            <a
+                              class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                              >Lorem</a
+                            >
+                            <a
+                              class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                              >Lorem</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="group/li flex items-center hover:bg-white pt-[1px]">
+                  <div class="p-4">
+                    <a
+                      class="cursor-pointer hover:text-[#365359] flex items-center gap-[125px]"
+                    >
+                      Lorem1
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-chevron-right"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+
+                  <!-- Burası ikinci kırılımın olduğu yer finallyCategories kısmı bir adet ana başlık ve 4 adet alt başlık içeriyor<--/-->
+                  <div
+                    id="finallyCategories"
+                    class="rounded-lg top-0 hidden shadow-lg group-hover/li:flex group-hover/li:absolute group-hover/li:ml-[220px] h-full gap-[20px] w-[-webkit-fill-available] px-12 py-6"
+                  >
+                    <div id="finallyCategories">
+                      <div class="items-center flex flex-col flex-wrap gap-4">
+                        <a class="flex hover:text-orange-500 cursor-pointer"
+                          >Lorem Main5</a
+                        >
+                        <div class="w-full flex flex-col">
+                          <hr />
+                          <a
+                            class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                            >Lorem</a
+                          >
+                          <a
+                            class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                            >Lorem</a
+                          >
+                          <a
+                            class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                            >Lorem</a
+                          >
+                          <a
+                            class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                            >Lorem</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div id="finallyCategories">
+                      <div id="finallyCategories">
+                        <div class="items-center flex flex-col flex-wrap gap-4">
+                          <a class="flex hover:text-orange-500 cursor-pointer"
+                            >Lorem Main2</a
+                          >
+                          <div class="w-full flex flex-col">
+                            <hr />
+                            <a
+                              class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                              >Lorem</a
+                            >
+                            <a
+                              class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                              >Lorem</a
+                            >
+                            <a
+                              class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                              >Lorem</a
+                            >
+                            <a
+                              class="flex flex-col gap-1 hover:text-orange-500 cursor-pointer"
+                              >Lorem</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div
+                class="invisible bg-white group-hover:visible w-full h-full shadow-lg top-0 absolute z-[-1]"
+              ></div>
+            </div>
+          </div>
+
+          <!-- Menu Butonları -->
+
+          <div id="menuButtons" class="flex gap-[50px]">
+            <div class="group/item cursor-pointer">
+              <a class="group-hover/item:text-orange-500">MenuBtn1</a>
+              <!-- Menu butonları ikinci kırılımın başlagıcı -->
+
+              <div
+                class="w-[80%] left-[191px] absolute block shadow-lg rounded-lg"
+              >
+                <div
+                  class="hidden group-hover/item:flex container h-full p-[35px]"
+                >
+                  <div class="w-full flex gap-16">
+                    <!-- Yeni menuSubItem modeli böyle olacak-->
+                    <div class="flex flex-col w-max gap-3">
+                      <a href="" class="hover:text-orange-500"
+                        >Sub item main category</a
+                      >
+                      <hr />
+                      <div class="flex flex-col gap-3">
+                        <a href="" class="hover:text-orange-500"
+                          >sub item sub category1</a
+                        >
+                        <a href="" class="hover:text-orange-500"
+                          >sub item sub category2</a
+                        >
+                        <a href="" class="hover:text-orange-500"
+                          >sub item sub category3</a
+                        >
+                        <a href="" class="hover:text-orange-500"
+                          >sub item sub category4</a
+                        >
+                      </div>
+                    </div>
+                    <div class="flex flex-col w-max gap-3">
+                      <a href="" class="hover:text-orange-500"
+                        >Sub item main category2</a
+                      >
+                      <hr />
+                      <div class="flex flex-col gap-3">
+                        <a href="" class="hover:text-orange-500"
+                          >sub item sub category1</a
+                        >
+                        <a href="" class="hover:text-orange-500"
+                          >sub item sub category2</a
+                        >
+                        <a href="" class="hover:text-orange-500"
+                          >sub item sub category3</a
+                        >
+                        <a href="" class="hover:text-orange-500"
+                          >sub item sub category4</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group/item cursor-pointer">
+              <a class="group-hover/item:text-orange-500">MenuBtn2</a>
+              <!-- Menu butonları ikinci kırılımın başlagıcı -->
+
+              <div
+                class="w-[80%] left-[191px] absolute block shadow-lg rounded-lg"
+              >
+                <div
+                  class="hidden group-hover/item:flex container h-full p-[35px]"
+                >
+                  <div class="w-full flex gap-16">
+                    <!-- Yeni menuSubItem modeli böyle olacak-->
+                    <div class="flex flex-col w-max gap-3">
+                      <a href="" class="hover:text-orange-500"
+                        >Sub item main category</a
+                      >
+                      <hr />
+                      <div class="flex flex-col gap-3">
+                        <a href="" class="hover:text-orange-500"
+                          >sub item sub category1</a
+                        >
+                        <a href="" class="hover:text-orange-500"
+                          >sub item sub category2</a
+                        >
+                        <a href="" class="hover:text-orange-500"
+                          >sub item sub category3</a
+                        >
+                        <a href="" class="hover:text-orange-500"
+                          >sub item sub category4</a
+                        >
+                      </div>
+                    </div>
+                    <div class="flex flex-col w-max gap-3">
+                      <a href="" class="hover:text-orange-500"
+                        >Sub item main category2</a
+                      >
+                      <hr />
+                      <div class="flex flex-col gap-3">
+                        <a href="" class="hover:text-orange-500"
+                          >sub item sub category1</a
+                        >
+                        <a href="" class="hover:text-orange-500"
+                          >sub item sub category2</a
+                        >
+                        <a href="" class="hover:text-orange-500"
+                          >sub item sub category3</a
+                        >
+                        <a href="" class="hover:text-orange-500"
+                          >sub item sub category4</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="group/item cursor-pointer">
+              <a class="group-hover/item:text-orange-500">MenuBtn3</a>
+              <!-- Menu butonları ikinci kırılımın başlagıcı -->
+
+              <div
+                class="w-[80%] left-[191px] absolute block shadow-lg rounded-lg"
+              >
+                <div
+                  class="hidden group-hover/item:flex container h-full p-[35px]"
+                >
+                  <div class="w-full flex gap-16">
+                    <!-- Yeni menuSubItem modeli böyle olacak-->
+                    <div class="flex flex-col w-max gap-3">
+                      <a href="" class="hover:text-orange-500"
+                        >Sub item main category</a
+                      >
+                      <hr />
+                      <div class="flex flex-col gap-3">
+                        <a href="" class="hover:text-orange-500"
+                          >sub item sub category1</a
+                        >
+                        <a href="" class="hover:text-orange-500"
+                          >sub item sub category2</a
+                        >
+                        <a href="" class="hover:text-orange-500"
+                          >sub item sub category3</a
+                        >
+                        <a href="" class="hover:text-orange-500"
+                          >sub item sub category4</a
+                        >
+                      </div>
+                    </div>
+                    <div class="flex flex-col w-max gap-3">
+                      <a href="" class="hover:text-orange-500"
+                        >Sub item main category2</a
+                      >
+                      <hr />
+                      <div class="flex flex-col gap-3">
+                        <a href="" class="hover:text-orange-500"
+                          >sub item sub category1</a
+                        >
+                        <a href="" class="hover:text-orange-500"
+                          >sub item sub category2</a
+                        >
+                        <a href="" class="hover:text-orange-500"
+                          >sub item sub category3</a
+                        >
+                        <a href="" class="hover:text-orange-500"
+                          >sub item sub category4</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="w-full" />
+      <div
+        id="mobileMenu"
+        class="w-0 z-[998] fixed h-full overflow-x-hidden shadow-lg top-0 left-0 transition-all duration-500"
+      >
+        <div
+          id="menuWrapper"
+          class="h-full max-w-full w-[20rem] me-auto relative overflow-x-hidden delay-200"
+        >
+          <div
+            class="bg-[#f5f5f5] h-full w-full p-6 pointer-events-auto flex flex-col relative"
+          >
+            <div id="closeMobileMenu" class="flex justify-between">
+              <div id="menuTitle" class="font-bold text-lg">MENU</div>
+              <button
+                class="hover:scale-150 hover:text-orange-500 transition-[1s]"
+                onclick="closeMobileMenu()"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="15"
+                  fill="currentColor"
+                  class="bi bi-x-lg"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"
+                  />
+                </svg>
+              </button>
+            </div>
+            <hr />
+            <div id="categoriesAndButtonsSection">
+              <div class="pt-9 flex flex-col gap-[10px]">
+                <!-- Mobil menusu için linklerin olduğu kısım -->
+                <div id="mobileLinksSection" class="flex flex-col gap-[20px]">
+                  <div
+                    class="cursor-pointer flex justify-between items-center gap-[65px] hover:text-orange-500 hover:bg-white rounded-sm p-1"
+                  >
+                    <a>Lorem1</a
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-chevron-compact-right"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    class="cursor-pointer flex justify-between items-center gap-[65px] hover:text-orange-500 hover:bg-white rounded-sm p-1"
+                  >
+                    <a>Lorem2</a
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-chevron-compact-right"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    class="cursor-pointer flex justify-between items-center gap-[65px] hover:text-orange-500 hover:bg-white rounded-sm p-1"
+                  >
+                    <a>Lorem3</a
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-chevron-compact-right"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671"
+                      />
+                    </svg>
+                  </div>
+                  <div
+                    class="cursor-pointer flex justify-between items-center gap-[65px] hover:text-orange-500 hover:bg-white rounded-sm p-1"
+                  >
+                    <a>Lorem4</a
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      class="bi bi-chevron-compact-right"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M6.776 1.553a.5.5 0 0 1 .671.223l3 6a.5.5 0 0 1 0 .448l-3 6a.5.5 0 1 1-.894-.448L9.44 8 6.553 2.224a.5.5 0 0 1 .223-.671"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
