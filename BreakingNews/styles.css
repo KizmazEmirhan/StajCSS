@@ -1,0 +1,41 @@
+body {
+  height: 100vh;
+  margin: 0;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text-wrapper {
+  display: flex;
+  position: relative;
+  overflow-x: hidden;
+  background-color: white;
+}
+.text-wrapper-one-inline {
+  white-space: nowrap;
+  animation: slide 25s linear infinite;
+}
+.text-wrapper-two-inline {
+  position: absolute;
+  white-space: nowrap;
+  animation: slide2 25s linear infinite;
+}
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes slide2 {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
