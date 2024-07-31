@@ -1,0 +1,104 @@
+.blue-block {
+  height: 50px;
+  width: 50px;
+  background-color: #1663a6;
+  border-top: 6px solid #79b3e3;
+  border-right: 6px solid #79b3e3;
+  border-left: 6px solid #0f3152;
+  border-bottom: 6px solid #0f3152;
+}
+.light-blue-block {
+  height: 50px;
+  width: 50px;
+  background-color: #59b0bd;
+  border-top: 6px solid #a6d9e0;
+  border-right: 6px solid #a6d9e0;
+  border-left: 6px solid #315b67;
+  border-bottom: 6px solid #315b67;
+}
+.orange-block {
+  height: 50px;
+  width: 50px;
+  background-color: #dc8400;
+  border-top: 6px solid #ebc180;
+  border-right: 6px solid #ebc180;
+  border-left: 6px solid #714402;
+  border-bottom: 6px solid #714402;
+}
+.green-block {
+  height: 50px;
+  width: 50px;
+  background-color: #379b30;
+  border-top: 6px solid #99d09a;
+  border-right: 6px solid #99d09a;
+  border-left: 6px solid #1c5013;
+  border-bottom: 6px solid #1c5013;
+}
+.purple-block {
+  height: 50px;
+  width: 50px;
+  background-color: #894386;
+  border-top: 6px solid #c59eca;
+  border-right: 6px solid #c59eca;
+  border-left: 6px solid #491b4b;
+  border-bottom: 6px solid #491b4b;
+}
+.yellow-block {
+  height: 50px;
+  width: 50px;
+  background-color: #ead600;
+  border-top: 6px solid #fcef5e;
+  border-right: 6px solid #fcef5e;
+  border-left: 6px solid #766602;
+  border-bottom: 6px solid #766602;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: black;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+@media only screen and (max-width: 479px) {
+  #blocks-wrapper {
+    padding: 50px;
+    background-color: white;
+    display: block;
+    column-count: 2;
+    column-gap: 0;
+  }
+}
+@media only screen and (min-width: 480px) {
+  #blocks-wrapper {
+    padding: 50px;
+    background-color: white;
+    display: block;
+    column-count: 2;
+    column-gap: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #blocks-wrapper {
+    padding: 50px;
+    background-color: white;
+    display: block;
+    column-count: 3;
+    column-gap: 0;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #blocks-wrapper {
+    padding: 50px;
+    background-color: white;
+    display: block;
+    column-count: 6;
+    column-gap: 0;
+    justify-content: center;
+  }
+}
