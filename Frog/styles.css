@@ -1,0 +1,283 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 100vh;
+}
+.container-wrapper {
+  background-color: #bbedef;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.frog-stand {
+  background-color: #890000;
+  width: 300px;
+  height: 250px;
+  clip-path: ellipse(112px 80% at bottom center);
+}
+.frog-head {
+  background-color: #018804;
+  clip-path: ellipse(25px 48%);
+  width: 65px;
+  height: 70px;
+  position: relative;
+  top: 40px;
+  z-index: 1;
+}
+.frog-head-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.frog-eyes {
+  top: 60px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.left-eye {
+  background-color: #018804;
+  clip-path: circle(12px);
+
+  width: 25px;
+  height: 25px;
+  position: relative;
+  z-index: 2;
+}
+.left-eye::after {
+  content: "";
+  background-color: white;
+  top: 4px;
+  left: 4px;
+  clip-path: circle(7px);
+  width: 15px;
+  height: 15px;
+  position: relative;
+  display: block;
+}
+.right-eye {
+  background-color: #018804;
+  clip-path: circle(12px);
+
+  width: 25px;
+  height: 25px;
+  position: relative;
+  z-index: 2;
+}
+.right-eye::after {
+  content: "";
+  background-color: white;
+  top: 4px;
+  left: 4px;
+  clip-path: circle(7px);
+  width: 15px;
+  height: 15px;
+  position: relative;
+  display: block;
+}
+.pupil {
+  width: 10px;
+  height: 10px;
+  clip-path: circle(4px);
+  background-color: black;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  z-index: 3;
+}
+.mouth {
+  top: 34px;
+  left: 15px;
+  background-color: black;
+  position: absolute;
+  width: 35px;
+  height: 38px;
+  clip-path: ellipse(19px 80% at top center);
+}
+.mouth::before {
+  content: "";
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  clip-path: ellipse(20px 68% at top center);
+  background-color: #018804;
+}
+.frog-body {
+  background-color: #018804;
+  clip-path: ellipse(35px 48%);
+  width: 75px;
+  height: 70px;
+  box-shadow: inset -3px -1px 20px 20px rgb(255 255 255 / 10%),
+    1px 20px 20px 20px rgb(0 0 0 / 0.1);
+  left: 75px;
+  position: relative;
+}
+.frog-body-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.frog-body::after {
+  content: "";
+  background-color: #9aff9b;
+  clip-path: ellipse(25px 50%);
+  width: 50px;
+  height: 60px;
+  display: block;
+  left: 13px;
+  position: relative;
+}
+.frog-back {
+  background-color: #018804;
+  clip-path: ellipse(35px 48%);
+  width: 75px;
+  height: 68px;
+  z-index: -1;
+  position: relative;
+  right: 9px;
+  top: 2px;
+}
+.frog-back-second {
+  background-color: #018804;
+  clip-path: ellipse(35px 48%);
+  width: 75px;
+  height: 68px;
+  z-index: -1;
+  position: relative;
+  right: 67px;
+  top: 2px;
+}
+.frog-legs {
+  display: flex;
+  position: relative;
+}
+.frog-left-leg {
+  position: relative;
+  left: 50px;
+}
+.frog-right-leg {
+  transform: scaleX(-1);
+  position: relative;
+  right: 51px;
+}
+.left-fingers {
+  display: flex;
+  bottom: 5px;
+  position: relative;
+  bottom: 13px;
+  left: 9px;
+  transform: scale(.75);
+  rotate: 1deg;
+}
+.left-fingers :nth-child(1) {
+  width: 25px;
+  height: 10px;
+  rotate: 5deg;
+  content: "";
+  clip-path: polygon(40% 0, 40% 0%, 15% 100%, 0 100%);
+  background-color: #018804;
+  position: relative;
+  left: 13px;
+}
+.left-fingers :nth-child(2) {
+  width: 25px;
+  height: 10px;
+  rotate: -20deg;
+  content: "";
+  clip-path: polygon(40% 0, 40% 0%, 15% 100%, 0 100%);
+  background-color: #018804;
+  position: relative;
+  right: 10px;
+  bottom: 1px;
+}
+.left-fingers :nth-child(3) {
+  width: 25px;
+  height: 10px;
+  rotate: -50deg;
+  content: "";
+  clip-path: polygon(40% 0, 40% 0%, 15% 100%, 0 100%);
+  background-color: #018804;
+  position: relative;
+  right: 34px;
+  bottom: 4px;
+}
+.left-fingers :nth-child(4) {
+  width: 25px;
+  right: 59px;
+  bottom: 6px;
+  height: 10px;
+  rotate: 286deg;
+  content: "";
+  clip-path: polygon(40% 0, 40% 0%, 15% 100%, 0 100%);
+  background-color: #018804;
+  position: relative;
+}
+.far-left-fingers {
+  display: flex;
+  bottom: 5px;
+  position: relative;
+}
+.far-left-fingers :nth-child(1) {
+  width: 25px;
+  height: 10px;
+  rotate: 5deg;
+  content: "";
+  clip-path: polygon(40% 0, 40% 0%, 15% 100%, 0 100%);
+  background-color: #018804;
+  position: relative;
+  left: 13px;
+}
+.far-left-fingers :nth-child(2) {
+  width: 25px;
+  height: 10px;
+  rotate: -20deg;
+  content: "";
+  clip-path: polygon(40% 0, 40% 0%, 15% 100%, 0 100%);
+  background-color: #018804;
+  position: relative;
+  right: 10px;
+  bottom: 1px;
+}
+.far-left-fingers :nth-child(3) {
+  width: 25px;
+  height: 10px;
+  rotate: -50deg;
+  content: "";
+  clip-path: polygon(40% 0, 40% 0%, 15% 100%, 0 100%);
+  background-color: #018804;
+  position: relative;
+  right: 34px;
+  bottom: 4px;
+}
+.far-left-fingers :nth-child(4) {
+  width: 25px;
+  right: 59px;
+  bottom: 6px;
+  height: 10px;
+  rotate: 286deg;
+  content: "";
+  clip-path: polygon(40% 0, 40% 0%, 15% 100%, 0 100%);
+  background-color: #018804;
+  position: relative;
+}
+.frog-wrapper {
+  top: 75px;
+  display: flex;
+  position: relative;
+  z-index: 1;
+  flex-direction: column;
+  align-items: center;
+}
+.image-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+}
