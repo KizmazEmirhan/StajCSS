@@ -9,33 +9,76 @@
   position: relative;
   left: 25px;
 }
-.header {
-  background-color: #1f2937;
-  height: 70px;
+.contact {
   display: flex;
   align-items: center;
+  gap: 20px;
+  padding-right: 40px;
+  font-size: 24px;
 }
-.headerTitle {
-  color: whitesmoke;
-  position: relative;
-  margin-left: 45px;
+.logo {
+  padding-left: 20px;
+}
+.logo img {
+  width: 120px;
+  height: 120px;
+}
+.header {
+  width: 100%;
+  background-color: #f5fcff;
+  height: 120px;
   display: flex;
-  font-size: larger;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+.link-image {
+  border-radius: 2%;
+  width: 440px;
+  height: 440px;
+}
+.linksSection {
+  column-count: 3;
+  justify-content: center;
+  gap: 60px;
+  padding: 40px;
+}
+.link-exp {
+  padding: 10px;
+  font-size: 20px;
+}
+.link-exp p {
+  color: #006b6a;
+}
+.link-exp p:hover {
+  color: #E62872;
+}
+.link-exp:hover {
+  color: #527ebd;
 }
 .link-card {
-  background-color: whitesmoke;
-  width: 180px;
-  height: 50px;
+  border: 1px solid #006b6a;
+  background-color: #f5fcff;
+  width: 450px;
+  height: 700px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
   border-radius: 5px;
   font-size: large;
+  padding: 20px;
+  margin-bottom: 60px;
+  border-radius: 5%;
 }
-.link-card:hover {
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+.go-to-link a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #006b6a;
 }
-
+.go-to-link a:hover {
+  color: #e62872;
+}
 * {
   box-sizing: border-box;
 }
@@ -43,12 +86,30 @@
   text-decoration: none;
   color: #1f2937;
 }
-.link:hover {
-  color: #527ebd;
+.link-card:hover {
+  box-shadow: 3px 3px #5E3BEE;
+}
+.footer-section {
+  background-color: #f5fcff;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+}
+.footer-section div {
+  color: #006b6a;
 }
 body {
   margin: 0;
   display: flex;
   flex-direction: column;
   gap: 40px;
+
+  height: 100vh;
+}
+* {
+  box-sizing: border-box;
 }
