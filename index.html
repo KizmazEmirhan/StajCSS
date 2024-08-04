@@ -3,244 +3,407 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./styles.css" />
-    <title>Staj Aktiviteleri</title>
+    <title>Persistence</title>
   </head>
   <body>
-    <div class="header">
-      <div class="logo">
-        <img src="./assets/logo2.png" alt="logo" />
+    <div
+      id="header-section"
+      class="d-flex align-items-center flex-column"
+      style="background-color: #231f20"
+    >
+      <div id="header-image">
+        <img
+          src="./assets/persıstence.png"
+          style="width: 550px"
+          alt="logo image"
+        />
       </div>
-      <div class="contact">
+    </div>
+    <div
+      id="cards-and-about"
+      class="container py-5 d-flex gap-3"
+      style="overflow: hidden"
+    >
+      <div id="card-section" class="col-8 d-flex flex-column gap-3">
+        <div id="card-wrapper" class="p-2" style="background-color: white">
+          <div id="card" class="d-flex justify-content-between">
+            <div id="card-text" class="d-flex flex-column gap-1 p-5">
+              <div
+                id="card-heading"
+                class="fw-bold fs-4"
+                style="color: #231f20"
+              >
+                Diamond
+              </div>
+
+              <div id="card-paragraph">
+                <p style="color: #231f20">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,
+                  dolorem debitis.
+                </p>
+              </div>
+              <div id="card-link" class="d-flex justify-content-end">
+                <a href="https://kizmazemirhan.github.io/Diamond/" class="link"
+                  >Go to page</a
+                >
+              </div>
+            </div>
+            <hr />
+            <div id="card-image">
+              <img
+                src="./assets/additionalResources/diamond2.png"
+                alt="card-image"
+                class="img-fluid"
+                style="width: 250px; height: 250px; object-fit: cover"
+              />
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div id="card-wrapper" class="p-2" style="background-color: white">
+          <div id="card" class="d-flex justify-content-between">
+            <div id="card-text" class="d-flex flex-column gap-1 p-5">
+              <div
+                id="card-heading"
+                class="fw-bold fs-4"
+                style="color: #231f20"
+              >
+                Frog
+              </div>
+
+              <div id="card-paragraph">
+                <p style="color: #231f20">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,
+                  dolorem debitis.
+                </p>
+              </div>
+              <div id="card-link" class="d-flex justify-content-end">
+                <a href="https://kizmazemirhan.github.io/Frog/" class="link"
+                  >Go to page</a
+                >
+              </div>
+            </div>
+            <hr />
+            <div id="card-image">
+              <img
+                src="./assets/additionalResources/frog2.png"
+                alt="card-image"
+                class="img-fluid"
+                style="width: 250px; height: 250px; object-fit: cover"
+              />
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div id="card-wrapper" class="p-2" style="background-color: white">
+          <div id="card" class="d-flex justify-content-between">
+            <div id="card-text" class="d-flex flex-column gap-1 p-5">
+              <div
+                id="card-heading"
+                class="fw-bold fs-4"
+                style="color: #231f20"
+              >
+                Invert Color
+              </div>
+
+              <div id="card-paragraph">
+                <p style="color: #231f20">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,
+                  dolorem debitis.
+                </p>
+              </div>
+              <div id="card-link" class="d-flex justify-content-end">
+                <a
+                  href="https://kizmazemirhan.github.io/Invert-Text-Color"
+                  class="link"
+                  >Go to page</a
+                >
+              </div>
+            </div>
+            <hr />
+            <div id="card-image">
+              <img
+                src="./assets/additionalResources/invertColor2.png"
+                alt="card-image"
+                class="img-fluid"
+                style="width: 250px; height: 250px; object-fit: cover"
+              />
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div id="card-wrapper" class="p-2" style="background-color: white">
+          <div id="card" class="d-flex justify-content-between">
+            <div id="card-text" class="d-flex flex-column gap-1 p-5">
+              <div
+                id="card-heading"
+                class="fw-bold fs-4"
+                style="color: #231f20"
+              >
+                Responsive Navbar
+              </div>
+
+              <div id="card-paragraph">
+                <p style="color: #231f20">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,
+                  dolorem debitis.
+                </p>
+              </div>
+              <div id="card-link" class="d-flex justify-content-end">
+                <a
+                  href="https://kizmazemirhan.github.io/E-Commerce-Navigation-Bar/"
+                  class="link"
+                  >Go to page</a
+                >
+              </div>
+            </div>
+            <hr />
+            <div id="card-image">
+              <img
+                src="./assets/additionalResources/navbar.png"
+                alt="card-image"
+                class="img-fluid"
+                style="width: 250px; height: 250px; object-fit: contain"
+              />
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div id="card-wrapper" class="p-2" style="background-color: white">
+          <div id="card" class="d-flex justify-content-between">
+            <div id="card-text" class="d-flex flex-column gap-1 p-5">
+              <div
+                id="card-heading"
+                class="fw-bold fs-4"
+                style="color: #231f20"
+              >
+                Rotating Squares
+              </div>
+
+              <div id="card-paragraph">
+                <p style="color: #231f20">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,
+                  dolorem debitis.
+                </p>
+              </div>
+              <div id="card-link" class="d-flex justify-content-end">
+                <a
+                  href="https://kizmazemirhan.github.io/Rotating-Squares/"
+                  class="link"
+                  >Go to page</a
+                >
+              </div>
+            </div>
+            <hr />
+            <div id="card-image">
+              <img
+                src="./assets/additionalResources/rotatingSquares2.png"
+                alt="card-image"
+                class="img-fluid"
+                style="width: 250px; height: 250px; object-fit: cover"
+              />
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div id="card-wrapper" class="p-2" style="background-color: white">
+          <div id="card" class="d-flex justify-content-between">
+            <div id="card-text" class="d-flex flex-column gap-1 p-5">
+              <div
+                id="card-heading"
+                class="fw-bold fs-4"
+                style="color: #231f20"
+              >
+                Shapes
+              </div>
+              <div id="card-paragraph">
+                <p style="color: #231f20">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,
+                  dolorem debitis.
+                </p>
+              </div>
+              <div id="card-link" class="d-flex justify-content-end">
+                <a href="https://kizmazemirhan.github.io/shapes/" class="link"
+                  >Go to page</a
+                >
+              </div>
+            </div>
+            <hr />
+            <div id="card-image">
+              <img
+                src="./assets/additionalResources/shapes2.png"
+                alt="card-image"
+                class="img-fluid"
+                style="width: 250px; height: 250px; object-fit: cover"
+              />
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div id="card-wrapper" class="p-2" style="background-color: white">
+          <div id="card" class="d-flex justify-content-between">
+            <div id="card-text" class="d-flex flex-column gap-1 p-5">
+              <div
+                id="card-heading"
+                class="fw-bold fs-4"
+                style="color: #231f20"
+              >
+                Tetris Blocks
+              </div>
+              <div id="card-paragraph">
+                <p style="color: #231f20">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,
+                  dolorem debitis.
+                </p>
+              </div>
+              <div id="card-link" class="d-flex justify-content-end">
+                <a
+                  href="https://kizmazemirhan.github.io/Tetris-Blocks/"
+                  class="link"
+                  >Go to page</a
+                >
+              </div>
+            </div>
+            <hr />
+            <div id="card-image">
+              <img
+                src="./assets/additionalResources/tetrisBlocks2.png"
+                alt="card-image"
+                class="img-fluid"
+                style="width: 250px; height: 250px; object-fit: cover"
+              />
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div id="card-wrapper" class="p-2" style="background-color: white">
+          <div id="card" class="d-flex justify-content-between">
+            <div id="card-text" class="d-flex flex-column gap-1 p-5">
+              <div
+                id="card-heading"
+                class="fw-bold fs-4"
+                style="color: #231f20"
+              >
+                Nested Shapes
+              </div>
+              <div id="card-paragraph">
+                <p style="color: #231f20">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,
+                  dolorem debitis.
+                </p>
+              </div>
+              <div id="card-link" class="d-flex justify-content-end">
+                <a
+                  href="https://kizmazemirhan.github.io/Intersection/"
+                  class="link"
+                  >Go to page</a
+                >
+              </div>
+            </div>
+            <hr />
+            <div id="card-image">
+              <img
+                src="./assets/additionalResources/transaction.png"
+                alt="card-image"
+                class="img-fluid"
+                style="width: 250px; height: 250px; object-fit: cover"
+              />
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div id="card-wrapper" class="p-2" style="background-color: white">
+          <div id="card" class="d-flex justify-content-between">
+            <div id="card-text" class="d-flex flex-column gap-1 p-5">
+              <div
+                id="card-heading"
+                class="fw-bold fs-4"
+                style="color: #231f20"
+              >
+                Breaking News Animation
+              </div>
+
+              <div id="card-paragraph">
+                <p style="color: #231f20">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,
+                  dolorem debitis.
+                </p>
+              </div>
+              <div id="card-link" class="d-flex justify-content-end">
+                <a
+                  href="https://kizmazemirhan.github.io/Marquee-Animation/"
+                  class="link"
+                  >Go to page</a
+                >
+              </div>
+            </div>
+            <hr />
+            <div id="card-image">
+              <img
+                src="./assets/additionalResources/breakingNews-2.png"
+                alt="card-image"
+                class="img-fluid"
+                style="width: 250px; height: 250px; object-fit: cover"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr style="border: 1px solid black; opacity: 0.15" />
+      <div
+        id="about-section"
+        class="col-4 container py-5"
+        style="background-color: white; white-space: wrap"
+      >
+        <div id="about">
+          <div class="fw-bold fs-4">About Me</div>
+          <p style="color: #231f20">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
+            corrupti ut reprehenderit quod non veniam dolores quae eum omnis aut
+            architecto in laudantium obcaecati nihil, enim quis inventore dicta.
+            Id.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      id="footer-section"
+      class="d-flex justify-content-center align-items-center"
+      style="background-color: #231f20; height: 150px"
+    >
+      <div id="footer-text" style="color: #ebe8e8">
+        Created and developed by Emirhan KIZMAZ all rights reserved
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          fill="currentColor"
-          class="bi bi-envelope"
+          width="16"
+          height="16"
+          fill="#ebe8e8"
+          class="bi bi-c-circle"
           viewBox="0 0 16 16"
         >
           <path
-            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"
+            d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"
           />
         </svg>
-        example@example.com
       </div>
     </div>
-    <div class="linksSection">
-      <div class="link-card">
-        <div class="link-image">
-          <img
-            class="link-image"
-            src="./assets/additionalResources/breakingNews.png"
-            alt="some image"
-          />
-        </div>
-        <div class="link-exp">
-          <h2 class="link-heading">Breaking News Animation</h2>
-          <hr class="exp-line" />
-          <p>
-            Create continuously breaking news animation using Pure CSS and HTML.
-            You can get source code from the link down below. Just don't forget
-            the open developer tools in your browser
-          </p>
-        </div>
-        <div class="go-to-link">
-          <a href="https://kizmazemirhan.github.io/Marquee-Animation/"
-            >Go to page</a
-          >
-        </div>
-      </div>
-      <div class="link-card">
-        <div class="link-image">
-          <img
-            class="link-image"
-            src="./assets/additionalResources/diamond.png"
-            alt="some image"
-          />
-        </div>
-        <div class="link-exp">
-          <h2 class="link-heading">Diamond Shape</h2>
-          <hr class="exp-line" />
-          <p>
-            Create a diamond shape like this, and just using Pure CSS and HTML.
-            Well you are at the right place, now you can access the code example
-            from link down below. Just open the developer tools in your browser.
-          </p>
-        </div>
-        <div class="go-to-link">
-          <a href="https://kizmazemirhan.github.io/Diamond/">Go to page</a>
-        </div>
-      </div>
-      <div class="link-card">
-        <div class="link-image">
-          <img
-            class="link-image"
-            src="./assets/additionalResources/frog.png"
-            alt="some image"
-          />
-        </div>
-        <div class="link-exp">
-          <h2 class="link-heading">Frog</h2>
-          <hr class="exp-line" />
-          <p>
-            Hi, i heard some weird noises in the forest when i walking there,
-            and i want to draw that thing which making that noise. Well,
-            finally, i guess its looking like this. Anyway you can access the
-            codes from the link down below, Don't forget the open developer
-            tools.
-          </p>
-        </div>
-        <div class="go-to-link">
-          <a href="https://kizmazemirhan.github.io/Frog/">Go to page</a>
-        </div>
-      </div>
-      <div class="link-card">
-        <div class="link-image" image>
-          <img
-            class="link-image"
-            src="./assets/additionalResources/invertColor.png"
-            alt="some image"
-          />
-        </div>
-        <div class="link-exp">
-          <h2 class="link-heading">Invert Color When Circle Inside</h2>
-          <hr class="exp-line" />
-          <p>
-            Hello there, do you struggled during create this. Don't thing hard,
-            you're in the right place. Just click the link down below and open
-            developer tab and yo will find the code.
-          </p>
-        </div>
-        <div class="go-to-link">
-          <a href="https://kizmazemirhan.github.io/Invert-Text-Color/"
-            >Go to page</a
-          >
-        </div>
-      </div>
-      <div class="link-card">
-        <div class="link-image">
-          <img
-            class="link-image"
-            src="./assets/additionalResources/likeGrek.png"
-            alt="some image"
-          />
-        </div>
-        <div class="link-exp">
-          <h2 class="link-heading">Some Pattern</h2>
-          <hr class="exp-line" />
-          <p>
-            Hey there, its a some pattern that i created with Pure CSS and HTML
-            basic concepts. If you want to see how i created click the link down
-            below and open developer tools in your browser
-          </p>
-        </div>
-        <div class="go-to-link">
-          <a href="https://kizmazemirhan.github.io/Intersection/">Go to page</a>
-        </div>
-      </div>
-      <div class="link-card">
-        <div class="link-image">
-          <img
-            class="link-image"
-            src="./assets/additionalResources/navbar.png"
-            alt="some image"
-          />
-        </div>
-        <div class="link-exp">
-          <h2 class="link-heading">Responsive Navigation Bar</h2>
-          <hr class="exp-line" />
-          <p>
-            Hi there, check that out, here is a navigation bar with mobile
-            compatible. Click the link down below and open developer tools in
-            your browser
-          </p>
-        </div>
-        <div class="go-to-link">
-          <a href="https://kizmazemirhan.github.io/E-Commerce-Navigation-Bar/"
-            >Go to page</a
-          >
-        </div>
-      </div>
-      <div class="link-card">
-        <div class="link-image">
-          <img
-            class="link-image"
-            src="./assets/additionalResources/rotatingSquares.png"
-            alt="some image"
-          />
-        </div>
-        <div class="link-exp">
-          <h2 class="link-heading">Rotating Squares</h2>
-          <hr class="exp-line" />
-          <p>
-            Hi people, here is my another css training activity, you can access
-            to code from link down below.
-          </p>
-        </div>
-        <div class="go-to-link">
-          <a href="https://kizmazemirhan.github.io/Rotating-Squares/"
-            >Go to page</a
-          >
-        </div>
-      </div>
-      <div class="link-card">
-        <div class="link-image">
-          <img
-            class="link-image"
-            src="./assets/additionalResources/shapes.png"
-            alt="some image"
-          />
-        </div>
-        <div class="link-exp">
-          <h2 class="link-heading">Basic Shapes</h2>
-          <hr class="exp-line" />
-          <p>
-            Hi there its me, there are shapes down there created with HTML and
-            CSS basic concepts. You can check it out from the link down below
-          </p>
-        </div>
-        <div class="go-to-link">
-          <a href="https://kizmazemirhan.github.io/shapes/">Go to page</a>
-        </div>
-      </div>
-      <div class="link-card">
-        <div class="link-image">
-          <img
-            class="link-image"
-            src="./assets/additionalResources/tetris.png"
-            alt="some image"
-          />
-        </div>
-        <div class="link-exp">
-          <h2 class="link-heading">Tetris Blocks</h2>
-          <hr class="exp-line" />
-          <p>
-            Hi, its me again, here check the responsive tetris blocks from the
-            link down there. Resize your browser to see the action
-          </p>
-        </div>
-        <div class="go-to-link">
-          <a href="https://kizmazemirhan.github.io/Tetris-Blocks/"
-            >Go to page</a
-          >
-        </div>
-      </div>
-    </div>
-    <div class="footer-section">
-      <div>Created and developed by Emirhan KIZMAZ all rigths reserved</div>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="16"
-        height="16"
-        fill="#006b6a"
-        class="bi bi-c-circle"
-        viewBox="0 0 16 16"
-      >
-        <path
-          d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"
-        />
-      </svg>
-    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

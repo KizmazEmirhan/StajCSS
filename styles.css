@@ -1,119 +1,20 @@
-.contact {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding-right: 40px;
-  font-size: 24px;
-}
-.logo {
-  padding-left: 20px;
-}
-.logo img {
-  width: 120px;
-  height: 120px;
-}
-.header {
-  width: 100%;
-  background-color: #f5fcff;
-  height: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-}
-.link-image {
-  border-radius: 14px;
-  width: 420px;
-  height: 420px;
-}
-.linksSection {
-  display: flex;
-  align-content: center;
-  align-items: center;
-  flex-flow: wrap;
-  justify-content: center;
-  gap: 60px;
-  padding: 40px;
-}
-.link-heading {
-  margin: 0;
-  color: #282938;
-}
-.exp-line {
-  width: -webkit-fill-available;
-  opacity: 0.4;
-}
-.link-exp {
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  font-size: 16px;
-}
-.link-exp p {
-  color: #006b6a;
-}
-.link-exp p:hover {
-  color: #e62872;
-}
-.link-exp:hover {
-  color: #527ebd;
-}
-.link-card {
-  border: 1px solid #006b6a;
-  background-color: #f5fcff;
-  width: 450px;
-  height: 700px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 24px;
-  font-size: large;
-  padding: 20px;
-  margin-bottom: 60px;
-  border-radius: 5%;
-}
-.go-to-link a {
-  text-decoration: none;
-  font-size: 18px;
-  color: #006b6a;
-}
-.go-to-link a:hover {
-  color: #e62872;
-}
-* {
-  box-sizing: border-box;
-}
 .link {
+  background-color: #ebe8e8;
+  color: #231f20;
+  border-radius: 5px;
+  border: none;
+  padding: 7px;
   text-decoration: none;
-  color: #1f2937;
 }
-.link-card:hover {
-  box-shadow: 0px 3px #5e3bee;
-  transition: all 0.5s;
-  transform: translateY(-5%);
+.link:hover {
+  transition: all;
+  background-color: #dfd9d9;
 }
-.footer-section {
-  background-color: #f5fcff;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  justify-content: center;
-  gap: 20px;
-  padding: 40px;
+::-webkit-scrollbar{
+  width: 5px;
+  height: 5px;
+  background-color:#231f20 ;
 }
-.footer-section div {
-  color: #006b6a;
-}
-body {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-
-  height: 100vh;
-}
-* {
-  box-sizing: border-box;
+::-webkit-scrollbar-thumb{
+  background-color: #ebe8e8
 }
