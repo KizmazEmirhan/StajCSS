@@ -1,0 +1,135 @@
+.content-wrapper {
+  display: flex;
+  padding: 50px;
+  justify-content: center;
+  gap: 40px;
+}
+.products-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.products-header {
+  font-weight: 700;
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: hsl(14, 65%, 9%);
+}
+.product-category {
+  font-weight: 400;
+  margin-bottom: 5px;
+  color: hsl(12, 20%, 44%);
+}
+.product-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid hsl(14, 65%, 9%);
+  background-color: white;
+}
+.product-button:hover {
+  color: hsl(14, 86%, 42%);
+  border: 1px solid hsl(14, 86%, 42%);
+  cursor: pointer;
+}
+.product-price {
+  color: hsl(14, 86%, 42%);
+}
+.product-title,
+.product-price,
+.product-button {
+  font-weight: 600;
+}
+.product-title {
+  color: hsl(14, 65%, 9%);
+}
+.product-image img {
+  object-fit: cover;
+  height: 300px;
+  border-radius: 10px;
+}
+.product-card {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin-bottom: 20px;
+}
+.product-button {
+  border-radius: 25px;
+  width: 250px;
+  height: 40px;
+}
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 25px;
+}
+.cart-heading {
+  color: hsl(14, 86%, 42%);
+  font-weight: 700;
+  font-size: 35px;
+}
+.cart-text {
+  color: #ad8a85;
+}
+.cart-container {
+  border-radius: 10px;
+  background-color: whitesmoke;
+  padding: 50px;
+
+  height: fit-content;
+}
+.cart-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 60px;
+}
+.cart-image-with-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 992px) {
+  .products-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .products-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .product-image img {
+    height: 350px;
+  }
+  .product-button {
+    width: 150px;
+  }
+  .product-text {
+    display: flex;
+    flex-direction: column;
+    bottom: 10px;
+    position: relative;
+  }
+}
+@media screen and (max-width: 660px) {
+  .products-section {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Red Hat Text", sans-serif;
+  background-color: hsl(20, 31%, 94%);
+}
