@@ -10,11 +10,17 @@
   transition: all;
   background-color: #dfd9d9;
 }
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 5px;
   height: 5px;
-  background-color:#231f20 ;
+  background-color: #231f20;
 }
-::-webkit-scrollbar-thumb{
-  background-color: #ebe8e8
+::-webkit-scrollbar-thumb {
+  background-color: #ebe8e8;
+}
+hr.custom-hr {
+  border: none;
+  height: 1px;
+  background-color: #231f20;
+  margin: 20px 0;
 }
