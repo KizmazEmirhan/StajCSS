@@ -1,0 +1,167 @@
+.cart-heading {
+  font-size: 35px;
+}
+
+.products-header {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.product-category {
+  margin-bottom: 5px;
+  font-weight: 400;
+  color: hsl(12, 20%, 44%);
+}
+
+.cart-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 60px;
+}
+
+.cart-container {
+  height: fit-content;
+  padding: 50px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+}
+
+.cart-text {
+  color: #ad8a85;
+}
+
+.product-card {
+  width: fit-content;
+  margin-bottom: 20px;
+}
+
+.product-card,
+.cart-wrapper,
+.cart-image-with-text {
+  flex-direction: column;
+}
+
+.product-button,
+.cart-image-with-text {
+  align-items: center;
+}
+
+.product-button {
+  cursor: pointer;
+  gap: 20px;
+  height: 40px;
+  width: 250px;
+  border-radius: 25px;
+  border: 1px solid hsl(14, 65%, 9%);
+  background-color: white;
+}
+.product-button:hover {
+  border-color: hsl(14, 86%, 42%);
+}
+
+.content-wrapper {
+  padding: 50px;
+  gap: 40px;
+}
+
+.button-wrapper {
+  position: relative;
+  bottom: 25px;
+}
+
+.content-wrapper,
+.product-button,
+.cart-image-with-text,
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.products-header,
+.product-button,
+.product-title {
+  color: hsl(14, 65%, 9%);
+}
+
+.product-button:hover,
+.cart-heading,
+.product-price {
+  color: hsl(14, 86%, 42%);
+}
+
+.products-header,
+.cart-heading {
+  font-weight: 700;
+}
+
+.product-title,
+.product-price,
+.product-button {
+  font-weight: 600;
+}
+
+.products-header,
+.product-title {
+  color: hsl(14, 65%, 9%);
+}
+.products-header .product-button,
+.product-title .product-button {
+  border: 1px solid hsl(14, 65%, 9%);
+}
+
+.products-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.product-image img {
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@media (max-width: 992px) {
+  .content-wrapper,
+  .product-text {
+    flex-direction: column;
+  }
+  .products-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .product-image img {
+    height: 350px;
+  }
+  .product-button {
+    width: 150px;
+  }
+  .product-text {
+    bottom: 10px;
+    position: relative;
+  }
+}
+@media (max-width: 660px) {
+  .products-container {
+    display: flex;
+  }
+  .products-section {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .products-container,
+  .content-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+body {
+  margin: 0;
+  background-color: hsl(20, 31%, 94%);
+  font-family: "Red Hat Text", "sans-serif";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=output.css.map */

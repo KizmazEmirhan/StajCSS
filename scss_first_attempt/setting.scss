@@ -1,0 +1,55 @@
+$primary-color: hsl(20, 31%, 94%);
+$header-color: hsl(14, 65%, 9%);
+$category-color: hsl(12, 20%, 44%);
+$hover-color: hsl(14, 86%, 42%);
+$cart-text-color: #ad8a85;
+$button-color: white;
+$cart-background-color: whitesmoke;
+$default-font-family: "Red Hat Text", "sans-serif";
+$font-weight-primary: 600;
+$font-weight-heading: 700;
+$font-weight-category: 400;
+$font-size-heading: 50px;
+$font-size-subHeading: 35px;
+$layout-breakpoint-medium: 992px;
+$layout-breakpoint-small: 660px;
+$product-gap: 30px;
+$button-gap: 20px;
+$cart-gap: 60px;
+$content-wrapper-gap: 40px;
+$content-wrapper-padding: 50px;
+$product-radius: 10px;
+$button-radius: 25px;
+$product-image-height: 300px;
+$button-height: 40px;
+$button-width: 250px;
+$header-margin: 20px;
+$button-bottom: 25px;
+$category-margin: 5px;
+$card-width:fit-content;
+
+@mixin align_position($position){
+   position: $position;
+}
+
+@mixin display_mode($mode) {
+  display: $mode;
+}
+@mixin justify_content($justify-content) {
+  justify-content: $justify-content;
+}
+@mixin align_items($align-items) {
+  align-items: $align-items;
+}
+@mixin align_content($align-content) {
+  align-content: $align-content;
+}
+@mixin wrap_mode($wrap-mode) {
+  flex-wrap: $wrap-mode;
+}
+@mixin display_direction($direction) {
+  flex-direction: $direction;
+}
+@mixin column-align($column-function) {
+  grid-template-columns: $column-function;
+}
