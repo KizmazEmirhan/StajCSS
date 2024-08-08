@@ -1,0 +1,83 @@
+@mixin align_position($position) {
+  position: $position;
+}
+@mixin display_mode($mode) {
+  display: $mode;
+}
+@mixin justify_content($justify-content) {
+  justify-content: $justify-content;
+}
+@mixin align_items($align-items) {
+  align-items: $align-items;
+}
+@mixin align_content($align-content) {
+  align-content: $align-content;
+}
+@mixin wrap_mode($wrap-mode) {
+  flex-wrap: $wrap-mode;
+}
+@mixin display_direction($direction) {
+  flex-direction: $direction;
+}
+@mixin column-align($column-function) {
+  grid-template-columns: $column-function;
+}
+@mixin set_decoration($decoration) {
+  list-style-type: $decoration;
+  text-decoration: $decoration;
+}
+@mixin button-raidus($radius) {
+  border-radius: $radius;
+}
+@mixin navbar_shadow() {
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+@mixin button_shadow() {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+@mixin image_align($mode) {
+  background-size: $mode;
+}
+@mixin image_repeat($repeat) {
+  background-repeat: $repeat;
+}
+@mixin image_position($position) {
+  background-position: $position;
+}
+$navbar-button-gap: 20px;
+$navbar-sections-gap: 30px;
+$logo-image-width: 140px;
+$logo-image-height: 32px;
+$navbar-padding: 20px;
+$main-font-family: "Figtree", Helvetica, Arial, sans-serif;
+$button-color-primary: #ff7d00;
+$button-border-color-primary: #ff7d00;
+$button-color-hover: #c35002;
+$button-color-secondary: #fff;
+$button-border-color-secondary: #fff;
+$button-height: 40px;
+$button-width: 150px;
+$text-color-primary: black;
+$wrapper-padding: 30px;
+$form-gap: 40px;
+$form-image-width: 690px;
+$form-image-height: 580px;
+$form-padding: 20px;
+$form-background: #f9f9f9;
+$form-image: url(./assets/card-professional-packages.png);
+$form-button-width: 100%;
+$form-button-height: 42px;
+$image-background: #e8eaee;
+$image-radius: 10px;
+$input-margin: 8px;
+$input-padding: 10px;
+$input-height: 47px;
+$input-outline-color: #ff7d00;
+$input-outline-width:.5rem;
+$input-border: none;
+$button-radius: 5px;
+$button-cursor: pointer;
+$label-font-size:12px;
+$input-radius:5px;
+

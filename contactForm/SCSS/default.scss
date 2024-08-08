@@ -1,0 +1,161 @@
+@import "./setting.scss";
+
+* {
+  font-family: $main-font-family;
+}
+body {
+  box-sizing: border-box;
+  margin: 0;
+}
+.links-and-buttons,
+.links-with-dropdown,
+.form-wrapper {
+  @include display_mode($mode: flex);
+}
+
+.input-group {
+  @include display_mode($mode: flex);
+  @include display_direction($direction: column);
+}
+
+#name-error,
+#surname-error,
+#phone-error,
+#mail-error,
+#company-error,
+#password-error {
+  font-size: $label-font-size;
+  color: $button-color-primary;
+}
+
+.navbar,
+.icons,
+.other-buttons,
+.form {
+  @include align_items($align-items: center);
+  @include display_mode($mode: flex);
+}
+form {
+  @include display_mode($mode: flex);
+  @include align_items($align-items: stretch);
+}
+.navbar,
+.form-wrapper,
+form {
+  @include justify_content($justify-content: center);
+}
+.link,
+.links-with-dropdown {
+  @include set_decoration($decoration: none);
+}
+
+.navbar {
+  @include navbar_shadow();
+  padding: $navbar-padding;
+}
+
+.logo-section img {
+  width: $logo-image-width;
+  height: $logo-image-height;
+}
+.links-and-buttons {
+  gap: $navbar-sections-gap;
+}
+.links-with-dropdown {
+  gap: $navbar-button-gap;
+}
+
+.links-with-dropdown,
+.other-buttons,
+.icons {
+  gap: $navbar-button-gap;
+}
+.link {
+  color: $text-color-primary;
+}
+.other-buttons button {
+  @include button-raidus($radius: 25px);
+  border: none;
+  @include button_shadow();
+}
+.form-button {
+  width: $form-button-width;
+  height: $form-button-height;
+  border: $input-border;
+  border-radius: $button-radius;
+  cursor: $button-cursor;
+  &:hover {
+    background-color: $button-color-hover;
+  }
+}
+.try-free,
+.form-button {
+  background-color: $button-color-primary;
+  color: $button-color-secondary;
+}
+
+.try-free {
+  width: $button-width;
+  height: $button-height;
+}
+.call-you {
+  background-color: $button-color-secondary;
+  width: $button-width;
+  height: $button-height;
+  color: $button-color-primary;
+}
+
+.form-wrapper {
+  gap: $form-gap;
+  padding: $wrapper-padding;
+  background-color: $form-background;
+}
+.form-image {
+  width: $form-image-width;
+  height: $form-image-height;
+  @include image_align($mode: contain);
+  @include image_repeat($repeat: no-repeat);
+  @include image_position($position: right);
+  background-image: $form-image;
+  background-color: $image-background;
+  border-radius: $image-radius;
+}
+.contact-form {
+  padding: $form-padding;
+}
+form {
+  @include display_direction($direction: column);
+  height: -webkit-fill-available;
+  gap: $form-gap;
+}
+.name-active,
+.surname-active,
+.mail-active,
+.phone-active,
+.company-active,
+.password-active {
+  outline: 1px solid $input-outline-color;
+}
+.name-surname {
+  @include display_mode($mode: flex);
+}
+.name-surname input:first-child {
+  margin-right: $input-margin;
+}
+.company,
+.phone,
+.mail,
+.password {
+  width: 100%;
+  & input {
+    width: -webkit-fill-available;
+  }
+}
+input {
+  height: $input-height;
+  border: $input-border;
+  padding-left: $input-padding;
+  outline-color: $input-outline-color;
+  outline-width: $input-outline-width;
+  border-radius: $input-radius;
+}
