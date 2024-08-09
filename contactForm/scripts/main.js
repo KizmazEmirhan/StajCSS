@@ -1,14 +1,105 @@
-var format = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+var format = /[`!@#$%^&*()_\-+=\[\]{};':"\\|,.<>\/?~ ]/;
 var letterFormat = /[a-zA-Z]+/;
 var numberFormat = /[0-9]+/;
-var form = document.querySelector("form");
-var state = false;
+const emailFormat = new RegExp(
+  /^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/,
+  "gm"
+);
 
 function removeClass(element, className, errorElement) {
   setTimeout(function () {
     element.classList.remove(className);
     errorElement.textContent = "";
   }, 2000);
+}
+function removeClass2(element, className) {
+  if (element.classList.contains(className)) {
+    element.classList.remove(className);
+  }
+}
+function checkName(element) {
+  console.log("uzunluk:", element.value.length);
+  if (element.value.length < 3) {
+    element.classList.add("name-active");
+    document.getElementById("name-error").textContent =
+      "isim en az 3 karakter olmalı";
+    state = true;
+  } else {
+    element.classList.remove("name-active");
+    document.getElementById("name-error").textContent = null;
+    state = true;
+  }
+}
+function checkSurname(element) {
+  if (element.value.length < 5) {
+    element.classList.add("surname-active");
+    document.getElementById("surname-error").textContent =
+      "Soyisim en az 5 karakter içermelidir";
+    state = true;
+  } else {
+    element.classList.remove("surname-active");
+    document.getElementById("surname-error").textContent = null;
+    state = true;
+  }
+}
+function checkPhone(element) {
+  if (element.value.length < 11) {
+    element.classList.add("phone-active");
+    document.getElementById("phone-error").textContent =
+      "Telefon numaranızı kontrol ediniz";
+    state = true;
+  } else if (element.value.indexOf("0") !== 0) {
+    element.classList.add("phone-active");
+    document.getElementById("phone-error").textContent =
+      "Telefon numaranızı başında 0 ile girin";
+  } else {
+    element.classList.remove("phone-active");
+    document.getElementById("phone-error").textContent = null;
+    state = true;
+  }
+}
+function checkMail(element) {
+  if (!emailFormat.test(element.value)) {
+    element.classList.add("mail-active");
+    document.getElementById("mail-error").textContent =
+      "Emailiniz formata uygun değil";
+    state = true;
+  } else {
+    element.classList.remove("mail-active");
+    document.getElementById("mail-error").textContent = null;
+    state = true;
+  }
+}
+function checkCompany(element) {
+  console.log("number:", numberFormat.test(element.value));
+  console.log("letter:", letterFormat.test(element.value));
+  if (!numberFormat.test(element.value) || !letterFormat.test(element.value)) {
+    element.classList.add("company-active");
+    document.getElementById("company-error").textContent =
+      "Şirket ismi harf ve rakam içermeli";
+    state = true;
+  } else {
+    element.classList.remove("company-active");
+    document.getElementById("company-error").textContent = null;
+    state = true;
+  }
+}
+function checkPassword(element) {
+  if (element.value.length < 5) {
+    element.classList.add("password-active");
+    document.getElementById("password-error").textContent =
+      "Şifre en az 5 karakter olmalıdır";
+    state = true;
+  } else if (!format.test(element.value)) {
+    element.classList.add("password-active");
+    document.getElementById("password-error").textContent =
+      "Şifre özel karakterler içermelidir";
+    state = true;
+  } else {
+    element.classList.remove("password-active");
+    document.getElementById("password-error").textContent = null;
+    state = true;
+  }
 }
 
 function clearPreviousClass() {
@@ -26,7 +117,6 @@ function clearPreviousClass() {
 }
 
 function checkCredentials(event) {
-  state = false;
   var name = document.getElementById("name");
   var surname = document.getElementById("surname");
   var email = document.getElementById("mail");
@@ -34,74 +124,13 @@ function checkCredentials(event) {
   var company = document.getElementById("company");
   var password = document.getElementById("password");
 
-  if (name.value.length < 3) {
-    name.classList.add("name-active");
-    document.getElementById("name-error").textContent =
-      "İsim en az 3 harf olmalı";
-    removeClass(name, "name-active", document.getElementById("name-error"));
-    state = true;
-  }
-  if (surname.value.length < 5) {
-    surname.classList.add("surname-active");
-    document.getElementById("surname-error").textContent = removeClass(
-      surname,
-      "surname-active",
-      document.getElementById("surname-error")
-    );
-    document.getElementById("surname-error").textContent =
-      "Soyad en az 5 harf olmalı";
-    state = true;
-  }
-  if (email.value.indexOf("@") == -1) {
-    email.classList.add("mail-active");
-    removeClass(email, "mail-active", document.getElementById("mail-error"));
-    document.getElementById("mail-error").textContent =
-      "E-posta formata uygun değil";
+  checkName(name);
+  checkSurname(surname);
+  checkCompany(company);
+  checkMail(email);
+  checkPassword(password);
+  checkPhone(phone);
 
-    state = true;
-  }
-  if (phone.value.length < 11) {
-    phone.classList.add("phone-active");
-    removeClass(phone, "phone-active", document.getElementById("phone-error"));
-    document.getElementById("phone-error").textContent =
-      "Telefonunuzu başında 0 ile girin";
-    state = true;
-  }
-  if (
-    letterFormat.test(company.value) == false ||
-    numberFormat.test(company.value) == false
-  ) {
-    company.classList.add("company-active");
-    removeClass(
-      company,
-      "company-active",
-      document.getElementById("company-error")
-    );
-    document.getElementById("company-error").textContent =
-      "Şirket ismi harf ve rakam içermeli";
-    state = true;
-  }
-  if (password.value.length < 5) {
-    password.classList.add("password-active");
-    removeClass(
-      password,
-      "password-active",
-      document.getElementById("password-error")
-    );
-    document.getElementById("password-error").textContent =
-      "Şifre en az 5 karakterli olmalı";
-    state = true;
-  } else if (format.test(password.value) == false) {
-    password.classList.add("password-active");
-    removeClass(
-      password,
-      "password-active",
-      document.getElementById("password-error")
-    );
-    document.getElementById("password-error").textContent =
-      "Şifrede özel karakterler bulunmalı";
-    state = true;
-  }
   if (state) {
     event.preventDefault();
   }

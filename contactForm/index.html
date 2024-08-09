@@ -63,11 +63,21 @@
             </div>
             <div class="name-surname">
               <div class="input-group">
-                <input id="name" type="text" placeholder="Adınız*" />
+                <input
+                  id="name"
+                  type="text"
+                  placeholder="Adınız*"
+                  onkeyup="checkName(this)"
+                />
                 <span id="name-error"></span>
               </div>
               <div class="input-group">
-                <input id="surname" type="text" placeholder="Soyadınız*" />
+                <input
+                  id="surname"
+                  type="text"
+                  placeholder="Soyadınız*"
+                  onkeyup="checkSurname(this)"
+                />
                 <span id="surname-error"></span>
               </div>
             </div>
@@ -77,25 +87,41 @@
                   id="company"
                   type="text"
                   placeholder="İşyeri,Şirket Adı"
+                  onkeyup="checkCompany(this)"
                 />
                 <span id="company-error"></span>
               </div>
             </div>
             <div class="input-group">
               <div class="phone">
-                <input id="phone" type="tel" placeholder="Telefon Numarası*" />
+                <input
+                  id="phone"
+                  type="tel"
+                  placeholder="Telefon Numarası*"
+                  onkeyup="checkPhone(this)"
+                />
                 <span id="phone-error"></span>
               </div>
             </div>
             <div class="input-group">
               <div class="mail">
-                <input id="mail" type="text" placeholder="E-Posta*" />
+                <input
+                  id="mail"
+                  type="text"
+                  placeholder="E-Posta*"
+                  onkeyup="checkMail(this)"
+                />
                 <span id="mail-error"></span>
               </div>
             </div>
             <div class="input-group">
               <div class="password">
-                <input id="password" type="password" placeholder="Şifre*" />
+                <input
+                  id="password"
+                  type="password"
+                  placeholder="Şifre*"
+                  onkeyup="checkPassword(this)"
+                />
                 <span id="password-error"></span>
               </div>
             </div>

@@ -28,6 +28,16 @@ body {
   color: #ff7d00;
 }
 
+.name-active,
+.surname-active,
+.mail-active,
+.phone-active,
+.company-active,
+.password-active {
+  outline: 1px solid #ff7d00 !important;
+}
+
+
 .navbar,
 .icons,
 .other-buttons,
@@ -143,15 +153,6 @@ form {
   gap: 40px;
 }
 
-.name-active,
-.surname-active,
-.mail-active,
-.phone-active,
-.company-active,
-.password-active {
-  outline: 1px solid #ff7d00;
-}
-
 .name-surname {
   display: flex;
 }
@@ -173,12 +174,17 @@ form {
   width: -webkit-fill-available;
 }
 
-input {
+#name,
+#surname,
+#phone,
+#company,
+#password,
+#mail {
   height: 47px;
   border: none;
   padding-left: 10px;
-  outline-color: #ff7d00;
-  outline-width: 0.5rem;
+  outline-color: #218838;
+  outline-width: 1px;
   border-radius: 5px;
 }
 

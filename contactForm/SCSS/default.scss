@@ -128,14 +128,6 @@ form {
   height: -webkit-fill-available;
   gap: $form-gap;
 }
-.name-active,
-.surname-active,
-.mail-active,
-.phone-active,
-.company-active,
-.password-active {
-  outline: 1px solid $input-outline-color;
-}
 .name-surname {
   @include display_mode($mode: flex);
 }
@@ -151,7 +143,12 @@ form {
     width: -webkit-fill-available;
   }
 }
-input {
+#name,
+#surname,
+#phone,
+#company,
+#password,
+#mail {
   height: $input-height;
   border: $input-border;
   padding-left: $input-padding;
@@ -159,3 +156,4 @@ input {
   outline-width: $input-outline-width;
   border-radius: $input-radius;
 }
+
