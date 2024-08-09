@@ -5,6 +5,8 @@
 body {
   box-sizing: border-box;
   margin: 0;
+  width: 100vw;
+  height: 100vh;
 }
 
 .links-and-buttons,
@@ -25,18 +27,17 @@ body {
 #company-error,
 #password-error {
   font-size: 12px;
-  color: #ff7d00;
+  color: #ff0000;
 }
 
 .name-active,
 .surname-active,
-.mail-active,
 .phone-active,
+.mail-active,
 .company-active,
 .password-active {
-  outline: 1px solid #ff7d00 !important;
+  outline: 1px solid #ff0000 !important;
 }
-
 
 .navbar,
 .icons,
@@ -89,6 +90,7 @@ form {
 
 .link {
   color: black;
+  font-size: 13px;
 }
 
 .other-buttons button {
@@ -155,6 +157,7 @@ form {
 
 .name-surname {
   display: flex;
+  gap: 20px;
 }
 
 .name-surname input:first-child {
@@ -186,6 +189,38 @@ form {
   outline-color: #218838;
   outline-width: 1px;
   border-radius: 5px;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  .hamburger-menu {
+    display: block;
+  }
+  .links-and-buttons {
+    display: none;
+  }
+  .navbar {
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 768px) {
+  .form-image {
+    display: none;
+  }
+  .form, form {
+    width: 100%;
+  }
+  .name-surname {
+    overflow: hidden;
+    gap: 40px;
+    flex-direction: column;
+  }
+  .input-group {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=output.css.map */

@@ -6,6 +6,8 @@
 body {
   box-sizing: border-box;
   margin: 0;
+  width: 100vw;
+  height: 100vh;
 }
 .links-and-buttons,
 .links-with-dropdown,
@@ -25,7 +27,16 @@ body {
 #company-error,
 #password-error {
   font-size: $label-font-size;
-  color: $button-color-primary;
+  color: $error-color;
+}
+
+.name-active,
+.surname-active,
+.phone-active,
+.mail-active,
+.company-active,
+.password-active {
+  outline: 1px solid #ff0000 !important;
 }
 
 .navbar,
@@ -72,6 +83,7 @@ form {
 }
 .link {
   color: $text-color-primary;
+  font-size: $navbar-font-size;
 }
 .other-buttons button {
   @include button-raidus($radius: 25px);
@@ -130,6 +142,7 @@ form {
 }
 .name-surname {
   @include display_mode($mode: flex);
+  gap: $desktop-gap;
 }
 .name-surname input:first-child {
   margin-right: $input-margin;
@@ -156,4 +169,35 @@ form {
   outline-width: $input-outline-width;
   border-radius: $input-radius;
 }
+.hamburger-menu{
+  @include display_mode($mode:none)
+}
 
+@media screen and (max-width: 992px) {
+  .hamburger-menu{
+    @include display_mode($mode:block)
+  }
+  .links-and-buttons {
+    @include display_mode($mode: none);
+  }
+  .navbar {
+    @include justify_content($justify-content: space-between);
+  }
+
+}
+@media screen and (max-width: 768px) {
+  .form-image {
+    @include display_mode($mode: none);
+  }
+  .form,form{
+    width: $form-mobile-width;
+  }
+  .name-surname{
+    overflow: $mobile-overflow;
+    gap: $mobile-gap;
+    @include display_direction($direction:column)
+  }
+  .input-group{
+    width:$form-button-width;
+  }
+}
