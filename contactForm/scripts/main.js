@@ -1,7 +1,23 @@
+<<<<<<< HEAD
 const format = /[`!@#$%^&*()_\-+=\[\]{};':"\\|,.<>\/?~ ]/;
 const letterFormat = /[a-zA-Z]+/;
 const numberFormat = /[0-9]+/;
 const emailFormat = new RegExp(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+
+const nameErr = document.getElementById("name-error");
+const surnameErr = document.getElementById("surname-error");
+const phoneErr = document.getElementById("phone-error");
+const mailErr = document.getElementById("mail-error");
+const companyErr = document.getElementById("company-error");
+const passwordErr = document.getElementById("password-error");
+=======
+var format = /[`!@#$%^&*()_\-+=\[\]{};':"\\|,.<>\/?~ ]/;
+var letterFormat = /[a-zA-Z]+/;
+var numberFormat = /[0-9]+/;
+const emailFormat = new RegExp(
+ /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+);
+>>>>>>> 30023d604ef41e19b07e9545e95d81c7674dabd2
 
 const nameErr = document.getElementById("name-error");
 const surnameErr = document.getElementById("surname-error");
@@ -22,6 +38,10 @@ function removeClass2(element, className) {
   }
 }
 function checkName(element) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 30023d604ef41e19b07e9545e95d81c7674dabd2
   if (element.value.length < 3) {
     element.classList.add("name-active");
     nameErr.textContent = "isim en az 3 karakter olmalı";
@@ -69,6 +89,10 @@ function checkMail(element) {
   }
 }
 function checkCompany(element) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 30023d604ef41e19b07e9545e95d81c7674dabd2
   if (!numberFormat.test(element.value) || !letterFormat.test(element.value)) {
     element.classList.add("company-active");
     companyErr.textContent = "Şirket ismi harf ve rakam içermeli";
