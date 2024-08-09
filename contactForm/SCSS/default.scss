@@ -166,13 +166,13 @@ form {
   outline-width: $input-outline-width;
   border-radius: $input-radius;
 }
-.hamburger-menu{
-  @include display_mode($mode:none)
+.hamburger-menu {
+  @include display_mode($mode: none);
 }
 
 @media screen and (max-width: 992px) {
-  .hamburger-menu{
-    @include display_mode($mode:block)
+  .hamburger-menu {
+    @include display_mode($mode: block);
   }
   .links-and-buttons {
     @include display_mode($mode: none);
@@ -180,21 +180,28 @@ form {
   .navbar {
     @include justify_content($justify-content: space-between);
   }
-
 }
 @media screen and (max-width: 768px) {
+  .contact-form {
+    padding: 0;
+  }
   .form-image {
     @include display_mode($mode: none);
   }
-  .form,form{
+  .form,
+  form {
     width: $form-mobile-width;
   }
-  .name-surname{
- 
+  .name-surname {
     gap: $mobile-gap;
-    @include display_direction($direction:column)
+    @include display_direction($direction: column);
   }
-  .input-group{
-    width:$form-button-width;
+  .input-group {
+    width: $form-button-width;
+  }
+}
+@media screen and (max-width: 428px) {
+  .form-wrapper {
+    padding: $mobile-padding;
   }
 }
