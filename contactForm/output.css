@@ -160,10 +160,6 @@ form {
   gap: 20px;
 }
 
-.name-surname input:first-child {
-  margin-right: 8px;
-}
-
 .company,
 .phone,
 .mail,
@@ -207,19 +203,27 @@ form {
   }
 }
 @media screen and (max-width: 768px) {
+  .contact-form {
+    padding: 0;
+  }
   .form-image {
     display: none;
   }
-  .form, form {
+  .form,
+  form {
     width: 100%;
   }
   .name-surname {
-    overflow: hidden;
     gap: 40px;
     flex-direction: column;
   }
   .input-group {
     width: 100%;
+  }
+}
+@media screen and (max-width: 428px) {
+  .form-wrapper {
+    padding: 15px;
   }
 }
 
