@@ -144,9 +144,6 @@ form {
   @include display_mode($mode: flex);
   gap: $desktop-gap;
 }
-.name-surname input:first-child {
-  margin-right: $input-margin;
-}
 .company,
 .phone,
 .mail,
