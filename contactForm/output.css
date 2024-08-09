@@ -207,7 +207,10 @@ form {
     padding: 0;
   }
   .form-image {
-    display: none;
+    width: 630px;
+  }
+  .form-wrapper {
+    flex-direction: column-reverse;
   }
   .form,
   form {

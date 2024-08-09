@@ -185,8 +185,11 @@ form {
   .contact-form {
     padding: 0;
   }
-  .form-image {
-    @include display_mode($mode: none);
+  .form-image{
+    width: $mobile-image-width;
+  }
+  .form-wrapper {
+    @include display_direction($direction: column-reverse);
   }
   .form,
   form {
