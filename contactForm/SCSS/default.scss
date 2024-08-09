@@ -193,7 +193,7 @@ form {
     width: $form-mobile-width;
   }
   .name-surname{
-    overflow: $mobile-overflow;
+ 
     gap: $mobile-gap;
     @include display_direction($direction:column)
   }
