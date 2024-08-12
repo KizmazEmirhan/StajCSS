@@ -104,4 +104,11 @@ export const cardsArray = [
     imageUrl: "./assets/additionalResources/clock.png",
     link: "https://kizmazemirhan.github.io/StajCSS/clock/",
   },
+  {
+    id: 12,
+    title: "Changing Navbar on Scroll",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,dolorem debitis.",
+    imageUrl: "./assets/additionalResources/stickyNavbar.png",
+    link: "https://kizmazemirhan.github.io/StajCSS/stickyNavbar/",
+  },
 ];

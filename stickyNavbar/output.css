@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.navbar {
+  background-color: #222222;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar,
+.navbar-alt {
+  position: fixed;
+  justify-content: space-around;
+  z-index: 9999;
+  width: 100vw;
+}
+
+.logo-alt,
+.button-to-page-alt {
+  color: #000;
+}
+
+.navbar-alt {
+  padding: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+.navbar-alt .button-to-page {
+  color: #000;
+}
+.navbar-alt .logo, .navbar-alt .other-buttons {
+  padding: 0;
+}
+
+.navbar-alt,
+.container,
+.image,
+.navbar,
+.content {
+  align-items: center;
+}
+
+.content,
+.image {
+  justify-content: center;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 650;
+}
+
+.other-buttons,
+.logo {
+  padding: 15px 8px;
+}
+
+.container,
+.image,
+.content {
+  flex-direction: column;
+}
+
+.container,
+.image,
+.content,
+.other-buttons,
+.navbar,
+.navbar-alt {
+  display: flex;
+}
+
+.other-buttons {
+  position: relative;
+  gap: 40px;
+}
+
+.other-buttons-li {
+  list-style-type: none;
+}
+
+.button-to-page {
+  text-decoration: none;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 450;
+}
+.button-to-page:hover {
+  color: #c0392b;
+}
+
+.other-buttons-li:first-child .button-to-page {
+  color: #c0392b;
+}
+
+.image {
+  background-image: url("assets/homePage-image.webp");
+  height: 100vh;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.image::after {
+  content: "";
+  display: block;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.content-1 h3,
+.content-2 h3 {
+  font-size: 150%;
+  margin: 20px 0;
+}
+
+.content-1 p,
+.content-2 p {
+  letter-spacing: 1.2px;
+  color: #555;
+  line-height: 30px;
+}
+
+.container {
+  position: absolute;
+}
+
+.content-1,
+.content-2 {
+  width: 80%;
+}
+
+.container h1 {
+  color: #fff;
+  font-size: 46px;
+}
+
+.container p {
+  color: #fff;
+  font-size: 20px;
+}
+
+/*# sourceMappingURL=output.css.map */

@@ -1,0 +1,128 @@
+@import "./default.scss";
+
+* {
+  box-sizing: border-box;
+  font-family: $default-font-family;
+}
+body {
+  margin: 0;
+}
+.navbar {
+  background-color: $navbar-inactive-color;
+  color: $primary-text-color;
+  transition: $navbar-alt-transition;
+}
+.navbar,
+.navbar-alt {
+  @include align_position($position: fixed);
+  @include justify_content($justify-content: space-around);
+  z-index: $navbar-z-index;
+  width: $navbar-width;
+}
+.logo-alt,
+.button-to-page-alt {
+  color: $text-color-secondary;
+}
+.navbar-alt {
+  padding: $navbar-alt-padding;
+  background-color: $primary-text-color;
+  box-shadow: $navbar-alt-box-shadow;
+  transition: $navbar-alt-transition;
+  @include toggle_navbar($className: "navbar-alt");
+}
+.navbar-alt,
+.container,
+.image,
+.navbar,
+.content {
+  @include align_items($align-items: center);
+}
+.content,
+.image {
+  @include justify_content($justify-content: center);
+}
+.logo {
+  font-size: $brand-font-size;
+  font-weight: $brand-font-weight;
+}
+
+.other-buttons,
+.logo {
+  padding: $padding-x $padding-y;
+}
+.container,
+.image,
+.content {
+  @include display_direction($direction: column);
+}
+.container,
+.image,
+.content,
+.other-buttons,
+.navbar,
+.navbar-alt {
+  @include display_mode($mode: flex);
+}
+.other-buttons {
+  position: $other-buttons-position;
+  gap: $buttons-gap;
+}
+.other-buttons-li {
+  list-style-type: $text-decoration-default;
+}
+.button-to-page {
+  text-decoration: $text-decoration-default;
+  font-size: $buttons-font-size;
+  color: $primary-text-color;
+  font-weight: $buttons-font-weight;
+  &:hover {
+    color: $primary-text-hover-color;
+  }
+}
+.other-buttons-li{
+    &:first-child{
+        .button-to-page{
+            color: $primary-text-hover-color;
+        }
+    }
+}
+.image {
+  background-image: $background-image;
+  height: $image-section-height;
+  background-position: $image-position;
+  background-repeat: $image-repeat;
+  background-size: $image-size;
+}
+.image::after {
+  content: "";
+  @include display_mode($mode: block);
+  height: $image-section-height;
+  width: $darker-width;
+  background-color: $image-section-background;
+}
+.content-1 h3,
+.content-2 h3 {
+  font-size: $paragraph-heading-font-size;
+  margin: $paragraph-heading-margin;
+}
+.content-1 p,
+.content-2 p {
+  letter-spacing: $paragraph-letter-space;
+  color: $paragraph-text-color;
+  line-height: $paragraph-line-height;
+}
+.container {
+  @include align_position($position: absolute);
+}
+.content-1,
+.content-2 {
+  width: $content-width;
+}
+.container h1 {
+  color: $primary-text-color;
+  font-size: $image-heading-size;
+}
+.container p {
+  color: $primary-text-color;
+  font-size: $image-font-size;
+}
