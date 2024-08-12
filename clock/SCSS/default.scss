@@ -1,0 +1,63 @@
+@mixin button-raidus($radius) {
+  border-radius: $radius;
+}
+@mixin align_position($position) {
+  position: $position;
+}
+@mixin display_mode($mode) {
+  display: $mode;
+}
+@mixin justify_content($justify-content) {
+  justify-content: $justify-content;
+}
+@mixin align_items($align-items) {
+  align-items: $align-items;
+}
+@mixin align_content($align-content) {
+  align-content: $align-content;
+}
+@mixin wrap_mode($wrap-mode) {
+  flex-wrap: $wrap-mode;
+}
+@mixin display_direction($direction) {
+  flex-direction: $direction;
+}
+@mixin apply_dark($className) {
+  @if $className== "dark" {
+    .hand.hour {
+      background-color: $dark-theme-primary-color;
+    }
+    .hand.minute {
+      background-color: $dark-theme-primary-color;
+    }
+    .origin-point::after {
+      background-color: $dark-theme-primary-color;
+    }
+    .theme-changer {
+      background-color: $dark-theme-primary-color;
+      color: $dark-theme-background;
+    }
+  }
+}
+
+$clock-wrapper-height: -webkit-fill-available;
+$clock-rotate-origin: top;
+$hands-position: relative;
+$default-hour-position: relative;
+$clock-hand-align-position: 3px;
+$default-font-style: "Heebo", sans-serif;
+$hour-font-size: 60px;
+$date-font-size: 25px;
+$hour-top-gap: 150px;
+$clock-bottom-gap: 50px;
+$day-background-color: #000000;
+$button-background-color: #000;
+$button-text-color: #fff;
+$day-text-color: #ffffff;
+$day-radius: 50%;
+$button-radius: 5px;
+$button-width: 90px;
+$button-height: 35px;
+$dark-theme-background: #111;
+$dark-theme-primary-color: #fff;
+$dark-theme-secondary-color: #333;

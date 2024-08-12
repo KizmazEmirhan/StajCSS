@@ -97,4 +97,11 @@ export const cardsArray = [
     imageUrl: "./assets/additionalResources/contactForm.png",
     link: "https://kizmazemirhan.github.io/StajCSS/contactForm/",
   },
+  {
+    id: 11,
+    title: "Clock",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,dolorem debitis.",
+    imageUrl: "./assets/additionalResources/clock.png",
+    link: "https://kizmazemirhan.github.io/StajCSS/clock/",
+  },
 ];

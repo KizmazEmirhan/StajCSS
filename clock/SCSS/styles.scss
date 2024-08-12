@@ -1,0 +1,101 @@
+@import "./default.scss";
+body {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  @include display_mode($mode: flex);
+  @include display_direction($direction: column);
+  @include justify_content($justify-content: center);
+  @include align_items($align-items: center);
+  font-family: $default-font-style;
+}
+.content-wrapper,
+.clock-wrapper {
+  @include display_mode($mode: flex);
+  @include display_direction($direction: column);
+  @include align_items($align-items: center);
+}
+.clock {
+  @include display_mode($mode: flex);
+  position: $default-hour-position;
+  bottom: $clock-bottom-gap;
+}
+.clock-wrapper {
+  @include justify_content($justify-content: space-around);
+}
+.content-wrapper {
+  width: 400px;
+  height: 100vh;
+  @include justify_content($justify-content: space-around);
+}
+.hand {
+  height: 65px;
+  width: 3px;
+  background-color: black;
+  transform-origin: $clock-rotate-origin;
+  position: $hands-position;
+}
+.hand.hour {
+  top: 5px;
+}
+.hand.minute {
+  height: 90px;
+  background-color: gray;
+  left: $clock-hand-align-position;
+  top: 5px;
+}
+.hand.second {
+  height: 90px;
+  right: $clock-hand-align-position;
+  background-color: red;
+  top: 5px;
+}
+.origin-point {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: red;
+}
+.origin-point::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 2px;
+  left: 2px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: black;
+}
+#hour {
+  font-size: $hour-font-size;
+  position: $default-hour-position;
+}
+#date {
+  font-size: $date-font-size;
+}
+.day-of-the-month {
+  background-color: $day-background-color;
+  color: $day-text-color;
+  border-radius: $day-radius;
+  width: 30px;
+  height: 30px;
+}
+.theme-changer {
+  border-radius: $button-radius;
+  height: $button-height;
+  width: $button-width;
+  background-color: $button-background-color;
+  color: $button-text-color;
+  border: none;
+}
+.dark{
+  background-color: $dark-theme-background;
+  color: $dark-theme-primary-color;
+
+}
+html.dark{
+  @include apply_dark($className:"dark")
+}
