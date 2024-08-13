@@ -1,0 +1,40 @@
+@import "./setting.scss";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: $body-margin;
+  width: $body-width;
+  height: $body-height;
+  background-color: $body-background-color;
+  @include justify_content($justify-content: center);
+}
+body,
+.box {
+  @include align_items($align-items: center);
+}
+body,
+.box,
+.box-wrapper {
+  @include display_mode($mode: flex);
+}
+
+.box-wrapper {
+  gap: $box-wrapper-gap;
+}
+.box {
+  width: $box-width;
+  height: $box-height;
+  background-color: $box-empty-color;
+  border: $box-empty-border;
+}
+.box.active {
+  background-color: $active-background;
+  border: $active-border;
+}
+.fill {
+  width: $box-filler-width;
+  height: $box-filler-height;
+  background-color: $box-drag-color;
+}

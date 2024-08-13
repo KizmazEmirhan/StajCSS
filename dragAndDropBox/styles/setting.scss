@@ -1,0 +1,36 @@
+@mixin align_position($position) {
+  position: $position;
+}
+@mixin display_mode($mode) {
+  display: $mode;
+}
+@mixin justify_content($justify-content) {
+  justify-content: $justify-content;
+}
+@mixin align_items($align-items) {
+  align-items: $align-items;
+}
+@mixin align_content($align-content) {
+  align-content: $align-content;
+}
+@mixin wrap_mode($wrap-mode) {
+  flex-wrap: $wrap-mode;
+}
+@mixin display_direction($direction) {
+  flex-direction: $direction;
+}
+
+$body-width: 100vw;
+$body-height: 100vh;
+$body-background-color: steelblue;
+$body-margin: 0;
+$box-drag-color: red;
+$box-empty-color: #fff;
+$box-width: 150px;
+$box-height: 150px;
+$box-filler-height: 145px;
+$box-filler-width: 145px;
+$box-wrapper-gap: 40px;
+$box-empty-border: 4px solid black;
+$active-border: 4px dashed white;
+$active-background: rgb(66, 64, 64);

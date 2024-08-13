@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: steelblue;
+  justify-content: center;
+}
+
+body,
+.box {
+  align-items: center;
+}
+
+body,
+.box,
+.box-wrapper {
+  display: flex;
+}
+
+.box-wrapper {
+  gap: 40px;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  background-color: #fff;
+  border: 4px solid black;
+}
+
+.box.active {
+  background-color: rgb(66, 64, 64);
+  border: 4px dashed white;
+}
+
+.fill {
+  width: 145px;
+  height: 145px;
+  background-color: red;
+}
+
+/*# sourceMappingURL=output.css.map */

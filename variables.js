@@ -118,4 +118,11 @@ export const cardsArray = [
     imageUrl: "./assets/additionalResources/imageSlides.png",
     link: "https://kizmazemirhan.github.io/StajCSS/imageSlides/",
   },
+  {
+    id: 14,
+    title: "Drag and Drop Boxes",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,dolorem debitis.",
+    imageUrl: "./assets/additionalResources/dragBoxes.png",
+    link: "https://kizmazemirhan.github.io/StajCSS/dragAndDropBox/",
+  },
 ];
