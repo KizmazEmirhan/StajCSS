@@ -111,4 +111,11 @@ export const cardsArray = [
     imageUrl: "./assets/additionalResources/stickyNavbar.png",
     link: "https://kizmazemirhan.github.io/StajCSS/stickyNavbar/",
   },
+  {
+    id: 13,
+    title: "Image Slides",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,dolorem debitis.",
+    imageUrl: "./assets/additionalResources/imageSlides.png",
+    link: "https://kizmazemirhan.github.io/StajCSS/imageSlides/",
+  },
 ];

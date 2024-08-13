@@ -1,0 +1,45 @@
+@import "./setting.scss";
+
+* {
+  font-family: $default-font-family;
+}
+body {
+  box-sizing: border-box;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  @include display_mode($mode: flex);
+  @include justify_content($justify-content: center);
+  @include align_items($align-items: center);
+}
+
+.image {
+  background-repeat: $no_repeat;
+  border-radius: $image-radius;
+  background-size: $image-size;
+  transition: $image-animation;
+  flex: $image-inactive-flex;
+  height: $image-height;
+  @include align_position($position: relative);
+}
+.image-text {
+  @include align_position($position: absolute);
+  color: $image-text-color;
+  bottom: $image-text-bottom;
+  left: $image-text-left;
+  font-size: $image-text-size;
+  transition: $image-text-transition;
+  opacity: 0;
+}
+.image.active {
+  transition: $image-animation;
+  flex: $image-active-flex;
+  @include toggle_text($className:active)
+}
+
+.slide-wrapper {
+  @include display_mode($mode: flex);
+  @include justify_content($justify-content: center);
+  width: $wrapper-width;
+  gap: $image-gap;
+}

@@ -1,0 +1,52 @@
+@mixin align_position($position) {
+  position: $position;
+}
+
+@mixin display_mode($mode) {
+  display: $mode;
+}
+@mixin justify_content($justify-content) {
+  justify-content: $justify-content;
+}
+@mixin align_items($align-items) {
+  align-items: $align-items;
+}
+@mixin align_content($align-content) {
+  align-content: $align-content;
+}
+@mixin wrap_mode($wrap-mode) {
+  flex-wrap: $wrap-mode;
+}
+@mixin display_direction($direction) {
+  flex-direction: $direction;
+}
+@mixin column-align($column-function) {
+  grid-template-columns: $column-function;
+}
+@mixin toggle_text($className){
+   @if $className=="active"{
+         .image-text{
+            opacity: 1;
+         }
+   }
+
+}
+$image-height: 100%;
+$image-height: 80vh;
+$image-inactive-width: 120px;
+$no_repeat: no-repeat;
+$image-size: cover;
+$wrapper-height: 512px;
+$wrapper-width: 90vw;
+$image-active-width: 100%;
+$image-radius: 50px;
+$image-gap: 20px;
+$image-animation: flex 0.7s ease-in;
+$image-active-flex: 5;
+$image-inactive-flex: 0.5;
+$image-text-color: #fff;
+$image-text-size: 32px;
+$image-text-bottom: -10px;
+$image-text-left: 20px;
+$default-font-family: "Muli", sans-serif;
+$image-text-transition: opacity 0.3s ease-in 0.4s;
