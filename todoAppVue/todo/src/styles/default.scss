@@ -2,9 +2,15 @@
 
 * {
   box-sizing: border-box;
+  transform: width 0.5s;
 }
 hr {
-  display: none;
+  display: block;
+  width: 100%;
+}
+h1 {
+  margin: 0;
+  color: #fff;
 }
 ::-webkit-scrollbar {
   width: 5px;
@@ -12,7 +18,7 @@ hr {
   background-color: $panel-background;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #fff;
+  background-color: #EEEEEE;
 }
 body {
   margin: $body-margin;
@@ -34,6 +40,7 @@ body,
 .panels-container {
   gap: $container-gap;
 }
+.input-wrapper,
 .left-panel,
 body,
 .panels-container,
@@ -41,12 +48,10 @@ body,
   @include display_mode($mode: flex);
 }
 .left-panel {
-  @include display_direction($direction: column-reverse);
-  max-width: 400px;
   width: 100%;
-  height: 200px;
   padding: $left-panel-padding;
   gap: $row-gap;
+  margin-left: $left-panel-margin;
 }
 .note-card {
   width: $card-width;
@@ -56,8 +61,9 @@ body,
 }
 .notes-section {
   @include display_mode($mode: grid);
-  @include column-align($column-function: repeat(1, 1fr));
-  row-gap: 5px;
+  @include column-align($column-function: repeat(2, 1fr));
+  row-gap: 15px;
+  column-gap: 50px;
 }
 .card-text {
   height: $card-text-height;
@@ -89,38 +95,44 @@ textarea {
 }
 .left-panel button {
   border: none;
-  height: $button-height;
+  @include align_position($position: relative);
   color: $button-text-color;
   font-size: $button-font-size;
   font-weight: $header-font-weight;
+  background: none;
+  right: 60px;
   &:hover {
-    background-color: $button-text-color;
-    color: #fff;
+    color: $button-hover-color;
   }
 }
-
+.left-panel textarea {
+  border-radius: $input-radius;
+  width: $panel-size;
+}
 .card-controls button {
   border: none;
 }
-
+.edit-note,
+.update-note,
 .delete-note {
-  background-color: $button-delete;
+  background-color: $button-control-background;
+}
+.delete-note {
   &:hover {
     color: $button-delete;
   }
 }
 .update-note {
-  background-color: $button-update;
   &:hover {
     color: $button-update;
   }
 }
 .edit-note {
-  background-color: $button-edit;
   &:hover {
     color: $button-edit;
   }
 }
+
 .delete-note,
 .update-note,
 .edit-note {
@@ -132,21 +144,17 @@ textarea {
     background-color: #fff;
   }
 }
-
+.left-panel,
+.panels-container {
+  @include display_direction($direction: column);
+}
 @media screen and (max-width: $xlg-screen-size) {
   .panels-wrapper {
     width: $wrapper-xlg-size;
   }
 }
 @media screen and (max-width: $lg-screen-size) {
-  .panels-wrapper{
+  .panels-wrapper {
     width: auto;
-  }
-  .panels-container {
-    @include display_direction($direction: column);
-  }
-  hr {
-    display: block;
-    width: 100%;
   }
 }
