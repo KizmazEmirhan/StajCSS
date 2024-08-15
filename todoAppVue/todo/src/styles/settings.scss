@@ -1,0 +1,76 @@
+@mixin align_position($position) {
+  position: $position;
+}
+@mixin display_mode($mode) {
+  display: $mode;
+}
+@mixin justify_content($justify-content) {
+  justify-content: $justify-content;
+}
+@mixin align_items($align-items) {
+  align-items: $align-items;
+}
+@mixin align_content($align-content) {
+  align-content: $align-content;
+}
+@mixin wrap_mode($wrap-mode) {
+  flex-wrap: $wrap-mode;
+}
+@mixin display_direction($direction) {
+  flex-direction: $direction;
+}
+@mixin column-align($column-function) {
+  grid-template-columns: $column-function;
+}
+
+$body-margin: 0;
+$section-height: 90vh;
+$section-width: 90vw;
+$padding-button: 15px;
+$button-order: 99;
+$textarea-size: 100%;
+$header-height: fit-content;
+$note-card-width: fit-content;
+$header-font-size: 45px;
+$header-font-weight: 600;
+$header-font-color: black;
+$left-panel-padding: 5px;
+$note-section-background: #9bb0c1;
+$note-section-padding: 15px;
+$card-width: 100%;
+$card-height: 200px;
+$container-overflow: scroll;
+$row-gap: 15px;
+$controls-gap: 15px;
+$text-padding: 5px;
+$controls-background-color: #51829b;
+$card-border: 2px solid #9bb0c1;
+$button-hover-color: #977e6c;
+$button-white-space: nowrap;
+$button-border: none;
+$submit-button-height: 30px;
+$note-font-size: 20px;
+$button-font-size: 22px;
+$column-gap: 15px;
+$box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+$container-gap: 20px;
+$panel-wrapper-width: 1600px;
+$card-text-height: 90%;
+$panel-size: 100%;
+$body-background-color: #ecdbba;
+$panel-background: #2d4263;
+$wrapper-padding: 30px;
+$wrapper-radius: 15px;
+$button-text-color: #c84b31;
+$control-button-radius: 50%;
+$button-edit: #e0a800;
+$button-delete: #c82333;
+$button-update: #218838;
+$button-height: 28px;
+
+$xlg-screen-size: 1600px;
+$lg-screen-size: 1024px;
+$md-screen-size: 768px;
+$mobile-screen-size: 425px;
+
+$wrapper-xlg-size: 1024px;

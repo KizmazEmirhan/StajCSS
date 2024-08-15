@@ -125,4 +125,11 @@ export const cardsArray = [
     imageUrl: "./assets/additionalResources/dragBoxes.png",
     link: "https://kizmazemirhan.github.io/StajCSS/dragAndDropBox/",
   },
+  {
+    id: 15,
+    title: "Todo List",
+    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,dolorem debitis.",
+    imageUrl: "./assets/additionalResources/todoApp.png",
+    link: "https://kizmazemirhan.github.io/StajCSS/todoAppVue/",
+  },
 ];
