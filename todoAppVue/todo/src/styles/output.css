@@ -107,13 +107,14 @@ textarea:focus {
 .note-text {
   color: #070d59;
   font-size: 20px;
+  overflow-wrap: anywhere;
 }
 
 .card-text textarea {
-  height: auto;
+  height: inherit;
   outline: none;
   border: none;
-  background-color: #ceddef;
+  background-color: #fff;
   color: #070d59;
 }
 

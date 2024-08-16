@@ -94,12 +94,13 @@ textarea {
 .note-text {
   color: $button-text-color;
   font-size: $note-font-size;
+  overflow-wrap: anywhere;
 }
 .card-text textarea {
-  height: auto;
+  height: inherit;
   outline: none;
   border: none;
-  background-color: $panel-background;
+  background-color: $button-control-background;
   color: $button-text-color;
 }
 .left-panel button {
