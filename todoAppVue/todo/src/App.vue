@@ -14,7 +14,7 @@ export default {
 </script>
 
 <style>
-@import "../../output.css";
+@import "./styles/output.css";
 
 * {
   box-sizing: border-box;

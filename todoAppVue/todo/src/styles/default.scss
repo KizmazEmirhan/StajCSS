@@ -2,7 +2,7 @@
 
 * {
   box-sizing: border-box;
-  transform: width 0.5s;
+  transition: all 0.3s linear;
 }
 hr {
   display: block;
@@ -18,7 +18,7 @@ h1 {
   background-color: $panel-background;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #EEEEEE;
+  background-color: #eeeeee;
 }
 body {
   margin: $body-margin;
@@ -60,8 +60,10 @@ body,
   border-radius: 5px;
 }
 .notes-section {
-  @include display_mode($mode: grid);
-  @include column-align($column-function: repeat(2, 1fr));
+  @include display_mode($mode: flex);
+  @include wrap_mode($wrap-mode:wrap);
+  // @include display_mode($mode: grid);
+  // @include column-align($column-function: repeat(2, 1fr));
   row-gap: 15px;
   column-gap: 50px;
 }
@@ -157,4 +159,39 @@ textarea {
   .panels-wrapper {
     width: auto;
   }
+}
+@media screen and (max-width: $md-screen-size) {
+  .notes-section {
+    @include wrap_mode($wrap-mode: wrap);
+  }
+}
+@media screen and (max-width: $mobile-screen-size) {
+  .panels-wrapper {
+    border-radius: 0;
+    background-color: $button-control-background;
+    box-shadow: none;
+  }
+  .left-panel {
+    margin: 0;
+  }
+  .left-panel button {
+    right: 0;
+  }
+  .note-card {
+    border: $card-border-mobile;
+  }
+  .card-controls {
+    background-color: $card-control-background-mobile;
+  }
+  h1 {
+    color: $panel-background;
+  }
+  .note-text{
+    color: $card-control-background-mobile;
+  }
+  body{
+    @include display_mode($mode:block);
+    background-color: #fff;
+  }
+
 }
