@@ -130,6 +130,6 @@ export const cardsArray = [
     title: "Todo List",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,dolorem debitis.",
     imageUrl: "./assets/additionalResources/todoApp.png",
-    link: "https://kizmazemirhan.github.io/StajCSS/todoAppVue/",
+    link: "https://todoapp-seven-eta.vercel.app/",
   },
 ];
