@@ -2,7 +2,7 @@
 
 * {
   box-sizing: border-box;
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
 }
 hr {
   display: block;
@@ -10,7 +10,7 @@ hr {
 }
 h1 {
   margin: 0;
-  color: #fff;
+  color: $button-text-color;
 }
 ::-webkit-scrollbar {
   width: 1px;
@@ -61,7 +61,7 @@ body,
 }
 .notes-section {
   @include display_mode($mode: flex);
-  @include wrap_mode($wrap-mode:wrap);
+  @include wrap_mode($wrap-mode: wrap);
   // @include display_mode($mode: grid);
   // @include column-align($column-function: repeat(2, 1fr));
   row-gap: 15px;
@@ -92,8 +92,15 @@ textarea {
   gap: $controls-gap;
 }
 .note-text {
-  color: white;
+  color: $button-text-color;
   font-size: $note-font-size;
+}
+.card-text textarea {
+  height: auto;
+  outline: none;
+  border: none;
+  background-color: $panel-background;
+  color: $button-text-color;
 }
 .left-panel button {
   border: none;
@@ -184,14 +191,13 @@ textarea {
     background-color: $card-control-background-mobile;
   }
   h1 {
-    color: $panel-background;
+    color: $card-h1-mobile;
   }
-  .note-text{
+  .note-text {
     color: $card-control-background-mobile;
   }
-  body{
-    @include display_mode($mode:block);
+  body {
+    @include display_mode($mode: block);
     background-color: #fff;
   }
-
 }
