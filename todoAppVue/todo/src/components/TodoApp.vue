@@ -4,11 +4,11 @@
       <div class="left-panel">
         <h1>Lets start taking notes!</h1>
         <div class="input-wrapper">
-          <textarea
+          <input
             type="text"
             v-model="newNote"
             @keyup.enter="addNote(newNote)"
-          ></textarea>
+          />
           <button @click="addNote(newNote)">
             <svg
               xmlns="http://www.w3.org/2000/svg"

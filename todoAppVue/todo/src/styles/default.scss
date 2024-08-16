@@ -40,6 +40,14 @@ body,
 .panels-container {
   gap: $container-gap;
 }
+.input-wrapper {
+  @include align_position($position: relative);
+}
+.input-wrapper button {
+  position: absolute;
+  right: 0;
+}
+
 .input-wrapper,
 .left-panel,
 body,
@@ -51,7 +59,6 @@ body,
   width: 100%;
   padding: $left-panel-padding;
   gap: $row-gap;
-  margin-left: $left-panel-margin;
 }
 .note-card {
   width: $card-width;
@@ -71,6 +78,7 @@ body,
   height: $card-text-height;
   padding: $text-padding;
 }
+input,
 textarea {
   width: $textarea-size;
   height: $textarea-size;
@@ -105,17 +113,19 @@ textarea {
 }
 .left-panel button {
   border: none;
-  @include align_position($position: relative);
+  @include align_position($position: absolute);
   color: $button-text-color;
   font-size: $button-font-size;
   font-weight: $header-font-weight;
   background: none;
-  right: 60px;
+
   &:hover {
     color: $button-hover-color;
   }
 }
-.left-panel textarea {
+.left-panel input {
+  outline: none;
+  border: $card-border-mobile;
   border-radius: $input-radius;
   width: $panel-size;
 }
@@ -174,6 +184,9 @@ textarea {
   }
 }
 @media screen and (max-width: $mobile-screen-size) {
+  input {
+    border: 1px solid $card-control-background-mobile;
+  }
   .panels-wrapper {
     border-radius: 0;
     background-color: $button-control-background;
